@@ -302,11 +302,11 @@ const ProductsCarousel: React.FC = () => {
   };
 
   return (
-    <section id="products" className="py-16 bg-gradient-to-br from-amber-900 via-yellow-900 to-amber-800">
+    <section id="products" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Our Products</h2>
-          <p className="text-xl text-amber-100 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-black mb-4">Our Products</h2>
+          <p className="text-xl text-amber-800 max-w-3xl mx-auto">
             Discover our comprehensive range of premium coatings designed for every application, from decorative finishes to industrial protection.
           </p>
         </div>
