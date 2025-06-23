@@ -236,11 +236,15 @@ const Navigation: React.FC = () => {
 
           {/* Logo */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('home')}>
-            <div className="bg-gradient-to-br from-amber-700 to-yellow-800 p-2 rounded-lg shadow-lg">
-              <Paintbrush className="h-8 w-8 text-white" />
+            <div className="p-2 rounded-lg shadow-lg">
+              <img 
+              src="public/Images/Tropiglow Logo.svg" 
+              alt="TropiGlow Logo"
+              className="h-10 w-10 object-contain"
+              />
             </div>
             <span className="text-2xl font-bold text-white">TropiGlow</span>
-          </div>
+        </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
