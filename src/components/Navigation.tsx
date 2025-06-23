@@ -237,8 +237,7 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('home')}>
             <div className="p-2 rounded-lg shadow-lg">
-              <img 
-              src="public/Images/Tropiglow Logo.svg" 
+              <img src="public/Images/Tropiglow png.png" 
               alt="TropiGlow Logo"
               className="h-10 w-10 object-contain"
               />
