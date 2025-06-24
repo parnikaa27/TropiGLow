@@ -87,9 +87,10 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-amber-900 mb-1">Address</h4>
                     <p className="text-amber-800">
-                      123 Industrial Avenue<br />
-                      Coating District, CD 12345<br />
-                      United States
+                      Building: R.G. Tower – Ground and First Floor<br />
+                      Region: Henveiru<br />
+                      Road: Hithah Finivaa Magu <br />
+                      Postal code: 20084 <br />
                     </p>
                   </div>
                 </div>

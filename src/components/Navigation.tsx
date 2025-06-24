@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDown, Menu, X, Paintbrush } from 'lucide-react';
+import { ChevronDown, Menu, X} from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 interface DropdownItem {
@@ -46,9 +46,7 @@ const Navigation: React.FC = () => {
           name: 'Enamel',
           id: 'enamel',
           items: [
-            'Premium Enamel Paints',
-            'High Gloss Enamel',
-            'Synthetic Enamel'
+            'ENAMELS'
           ]
         }
       ]
@@ -236,12 +234,10 @@ const Navigation: React.FC = () => {
 
           {/* Logo */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('home')}>
-            <div className="p-2 rounded-lg shadow-lg">
-              <img src="public/Images/Tropiglow png.png" 
+              <img src="public/Images/logo.jpg" 
               alt="TropiGlow Logo"
               className="h-10 w-10 object-contain"
               />
-            </div>
             <span className="text-2xl font-bold text-white">TropiGlow</span>
         </div>
 

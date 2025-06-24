@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+              index === currentSlide ? 'opacity-600' : 'opacity-0'
             }`}
           >
             <img
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-amber-900/80 via-yellow-900/70 to-amber-800/80"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-900/70 via-yellow-900/80 to-amber-800/70"></div>
           </div>
         ))}
       </div>

@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <div className="bg-gradient-to-br from-amber-700 to-yellow-800 p-2 rounded-lg shadow-lg">
                 <img
-                src="public/Images/Tropiglow png.png" 
+                src="public/Images/logo.jpg" 
                 alt="TropiGlow Logo"
                 className="h-8 w-8 object-contain"
                 />
@@ -97,24 +97,6 @@ const Footer: React.FC = () => {
                   Sunday: Closed
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="border-t border-amber-700 mt-12 pt-8">
-          <div className="max-w-md mx-auto text-center">
-            <h3 className="text-xl font-bold mb-4 text-amber-900">Stay Updated</h3>
-            <p className="text-amber-800 mb-6">Subscribe to our newsletter for latest products and industry insights.</p>
-            <div className="flex space-x-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-amber-800 text-white border-2 border-amber-700 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent placeholder-amber-300"
-              />
-              <button className="bg-gradient-to-r from-amber-600 to-yellow-700 hover:from-amber-700 hover:to-yellow-800 px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg">
-                Subscribe
-              </button>
             </div>
           </div>
         </div>
