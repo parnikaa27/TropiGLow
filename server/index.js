@@ -80,11 +80,11 @@ app.post('/api/contact', async (req, res) => {
       const companyMailOptions = {
         from: process.env.EMAIL_USER,
         to: 'sales.cenpro@opromaldives.com', 
-        subject: `New Contact Form Submission from ${name}`,
+        subject: `TropiGlow Enquiry from ${name}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <div style="background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; padding: 20px; border-radius: 10px 10px 0 0;">
-              <h2 style="margin: 0;">New Contact Form Submission</h2>
+              <h2 style="margin: 0;">TropiGlow Enquiry</h2>
               <p style="margin: 5px 0 0 0; opacity: 0.9;">TropiGlow Website</p>
             </div>
             <div style="background: #f8fafc; padding: 20px; border-radius: 0 0 10px 10px; border: 1px solid #e2e8f0;">
@@ -123,7 +123,7 @@ app.post('/api/contact', async (req, res) => {
                 <div style="background: #f1f5f9; padding: 15px; border-radius: 5px; margin: 10px 0;">
                   <p style="margin: 0; color: #374151;">${message}</p>
                 </div>
-                <p>If you have any urgent inquiries, please feel free to call us at <strong>+960 9310373</strong>.</p>
+                <p>If you have any urgent enquiries, please feel free to call us at <strong>+960 9310373</strong>.</p>
                 <p>Best regards,<br>TropiGlow Team</p>
               </div>
               <div style="text-align: center; margin-top: 20px; padding: 15px; background: white; border-radius: 8px;">
