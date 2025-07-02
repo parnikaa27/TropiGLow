@@ -98,7 +98,7 @@ const ProductsCarousel: React.FC = () => {
         }
       ],
       description: 'Professional wood finishing solutions for furniture, flooring, and architectural applications',
-      cardImage: '/public/WhatsApp Image 2025-06-19 at 12.09.42.jpeg',
+      cardImage: '/WhatsApp Image 2025-06-19 at 12.09.42.jpeg',
       popupImage: 'https://i.pinimg.com/736x/f2/ff/6f/f2ff6f1902805826c246f66c7ca74aeb.jpg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
       detailedDescription: 'WOODVIBE series represents the pinnacle of wood coating technology. Our 2K PU systems provide exceptional durability, chemical resistance, and aesthetic enhancement for all wood surfaces.',
       features: [
