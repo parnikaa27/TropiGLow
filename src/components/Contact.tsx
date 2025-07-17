@@ -64,11 +64,11 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gradient-to-br from-blue-100 via-slate-100 to-blue-100">
+    <section id="contact" className="py-16 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-700 mb-4">Get in Touch</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Get in Touch</h2>
+          <p className="text-xl text-slate-700 max-w-3xl mx-auto">
             We'd love to hear from you. Whether you're planning a project or seeking a tailored solution, reach out today.
           </p>
         </div>
@@ -76,17 +76,17 @@ const Contact: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200">
-              <h3 className="text-2xl font-bold text-slate-700 mb-6">Contact Information</h3>
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-purple-200">
+              <h3 className="text-2xl font-bold text-slate-800 mb-6">Contact Information</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-lg shadow-lg">
+                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-lg shadow-lg">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-700 mb-1">Address</h4>
-                    <p className="text-slate-600">
+                    <h4 className="font-semibold text-slate-800 mb-1">Address</h4>
+                    <p className="text-slate-700">
                       Building: R.G. Tower – Ground and First Floor<br />
                       Region: Henveiru<br />
                       Road: Hithah Finivaa Magu <br />
@@ -96,35 +96,22 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-lg shadow-lg">
+                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-lg shadow-lg">
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-700 mb-1">Phone</h4>
-                    <p className="text-slate-600">+960 9310373</p>
+                    <h4 className="font-semibold text-slate-800 mb-1">Phone</h4>
+                    <p className="text-slate-700">+960 9310373</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-lg shadow-lg">
+                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-lg shadow-lg">
                     <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-700 mb-1">Email</h4>
-                    <p className="text-slate-600">sales.cenpro@opromaldives.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-lg shadow-lg">
-                    <Clock className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-700 mb-1">Business Hours</h4>
-                    <p className="text-slate-600">
-                      Mon - Sat: 9:00 AM – 6:00 PM<br />
-                      Sunday: Closed
-                    </p>
+                    <h4 className="font-semibold text-slate-800 mb-1">Email</h4>
+                    <p className="text-slate-700">sales.cenpro@opromaldives.com</p>
                   </div>
                 </div>
               </div>
@@ -147,14 +134,14 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200">
-            <h3 className="text-2xl font-bold text-slate-700 mb-6">Send us a Message</h3>
+          <div className="bg-white rounded-xl p-8 shadow-lg border border-purple-200">
+            <h3 className="text-2xl font-bold text-slate-800 mb-6">Send us a Message</h3>
             
             {submitStatus === 'success' ? (
               <div className="text-center py-8">
                 <CheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
-                <h4 className="text-xl font-bold text-slate-700 mb-2">Message Sent Successfully!</h4>
-                <p className="text-slate-600">We'll get back to you within 24 hours.</p>
+                <h4 className="text-xl font-bold text-slate-800 mb-2">Message Sent Successfully!</h4>
+                <p className="text-slate-700">We'll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -166,7 +153,7 @@ const Contact: React.FC = () => {
                 )}
 
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-slate-800 mb-2">
                     Name *
                   </label>
                   <input
@@ -177,13 +164,13 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 disabled:bg-slate-100 disabled:cursor-not-allowed bg-white"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200 disabled:bg-slate-100 disabled:cursor-not-allowed bg-white"
                     placeholder="Your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-slate-800 mb-2">
                     Email *
                   </label>
                   <input
@@ -194,13 +181,13 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 disabled:bg-slate-100 disabled:cursor-not-allowed bg-white"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200 disabled:bg-slate-100 disabled:cursor-not-allowed bg-white"
                     placeholder="your.email@example.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-semibold text-slate-800 mb-2">
                     Phone
                   </label>
                   <input
@@ -210,13 +197,13 @@ const Contact: React.FC = () => {
                     value={formData.phone}
                     onChange={handleInputChange}
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 disabled:bg-slate-100 disabled:cursor-not-allowed bg-white"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200 disabled:bg-slate-100 disabled:cursor-not-allowed bg-white"
                     placeholder="Your phone number"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-slate-800 mb-2">
                     Message *
                   </label>
                   <textarea
@@ -227,7 +214,7 @@ const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none disabled:bg-slate-100 disabled:cursor-not-allowed bg-white"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200 resize-none disabled:bg-slate-100 disabled:cursor-not-allowed bg-white"
                     placeholder="Tell us about your project or inquiry..."
                   />
                 </div>
@@ -235,7 +222,7 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-1"
+                  className="w-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-1"
                 >
                   {isSubmitting ? (
                     <>

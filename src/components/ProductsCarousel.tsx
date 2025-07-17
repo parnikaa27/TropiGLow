@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Product {
@@ -23,6 +24,7 @@ interface ProductCategory {
 const ProductsCarousel: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   const products: Product[] = [
     {
@@ -57,7 +59,7 @@ const ProductsCarousel: React.FC = () => {
       ],
       description: 'Premium interior and exterior decorative solutions for residential and commercial spaces',
       cardImage: '/enamels.png',
-      popupImage: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      popupImage: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'Our decorative paint range offers superior coverage, durability, and aesthetic appeal. From luxurious interior finishes to weather-resistant exterior coatings, each product is formulated with advanced technology to deliver exceptional performance and long-lasting beauty.',
       features: [
         'Superior Coverage & Opacity',
@@ -99,7 +101,7 @@ const ProductsCarousel: React.FC = () => {
       ],
       description: 'Professional wood finishing solutions for furniture, flooring, and architectural applications',
       cardImage: '/WhatsApp Image 2025-06-19 at 12.09.42.jpeg',
-      popupImage: 'https://i.pinimg.com/736x/f2/ff/6f/f2ff6f1902805826c246f66c7ca74aeb.jpg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      popupImage: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'WOODVIBE series represents the pinnacle of wood coating technology. Our 2K PU systems provide exceptional durability, chemical resistance, and aesthetic enhancement for all wood surfaces.',
       features: [
         '2K Polyurethane Technology',
@@ -141,7 +143,7 @@ const ProductsCarousel: React.FC = () => {
       ],
       description: 'Decorative textured coatings for unique architectural finishes and surface treatments',
       cardImage: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      popupImage: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      popupImage: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'Create stunning visual effects with our range of textured finishes. From subtle textures to bold architectural statements, our products offer unlimited creative possibilities.',
       features: [
         'Multiple Texture Patterns',
@@ -191,7 +193,7 @@ const ProductsCarousel: React.FC = () => {
       ],
       description: 'Essential surface preparation products for optimal coating adhesion and performance',
       cardImage: '/wall putty .png',
-      popupImage: 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      popupImage: 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'Proper surface preparation is crucial for coating success. Our Grippa and Sliko range ensures excellent adhesion, surface smoothness, and long-term performance.',
       features: [
         'Excellent Adhesion',
@@ -247,7 +249,7 @@ const ProductsCarousel: React.FC = () => {
       ],
       description: 'Industrial-grade epoxy and polyurethane systems for maximum protection and durability',
       cardImage: 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      popupImage: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      popupImage: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'ZBOND and BONDX series offer uncompromising protection for industrial and marine environments. These high-performance coatings provide exceptional corrosion resistance and durability. WBOND HR series is specifically formulated for high-temperature applications.',
       features: [
         'Superior Corrosion Protection',
@@ -295,7 +297,7 @@ const ProductsCarousel: React.FC = () => {
       ],
       description: 'Marine-grade coatings for vessels, offshore structures, and coastal applications',
       cardImage: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      popupImage: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      popupImage: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'HAWKY marine coatings provide comprehensive protection against the harsh marine environment. From antifouling to anti-corrosive systems, we ensure your marine assets stay protected.',
       features: [
         'Superior Antifouling Performance',
@@ -332,7 +334,7 @@ const ProductsCarousel: React.FC = () => {
       ],
       description: 'Durable floor coating systems for industrial, commercial, and residential applications',
       cardImage: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      popupImage: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      popupImage: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'STEPIN floor coating system provides exceptional durability and performance for high-traffic areas. Our floor coatings offer chemical resistance, easy maintenance, and long-lasting protection.',
       features: [
         'High Traffic Durability',
@@ -381,6 +383,45 @@ const ProductsCarousel: React.FC = () => {
     setSelectedProduct(null);
   };
 
+  const handleProductItemClick = (item: string) => {
+    navigate(getProductId(item));
+  };
+
+  const getProductId = (productName: string): string => {
+    const productMap: Record<string, string> = {
+      'MAPLE INTERIOR': '/products/maple-interior',
+      'MAPLE LUXURY INTERIOR': '/products/maple-luxury-interior',
+      'MAPLE ANTI FUNGAL INTERIOR': '/products/maple-anti-fungal-interior',
+      'ALLURA EXTERIOR': '/products/allura-exterior',
+      'ALLURA LUXURY EXTERIOR': '/products/allura-luxury-exterior',
+      'ALLURA ANTI FUNGAL EXTERIOR': '/products/allura-anti-fungal-exterior',
+      'ENAMELS': '/products/enamels',
+      'WOODVIBE 2K PU Wood Stains - Matte-Glossy': '/products/woodvibe-stains',
+      'WOODVIBE 2K PU Clear Coats/Varnishes': '/products/woodvibe-clear-coats',
+      'Interior Textured Finishes': '/products/interior-textured-finishes',
+      'Exterior Textured Finishes': '/products/exterior-textured-finishes',
+      'Stucco Paint': '/products/stucco-paint',
+      'Grippa Interior Primer': '/products/grippa-interior-primer',
+      'Grippa Exterior Primer': '/products/grippa-exterior-primer',
+      'Grippa Barrier Coating': '/products/grippa-barrier-coating',
+      'Grippa Dampproof Primer': '/products/grippa-dampproof-primer',
+      'Sliko ACRYLIC INT/EXT PUTTY': '/products/sliko-acrylic-putty',
+      'Sliko CRACKFILL': '/products/sliko-crackfill',
+      'ZBOND High Build Epoxy Primer': '/products/zbond-epoxy-primer',
+      'ZBOND Epoxy Mastic Coatings': '/products/zbond-epoxy-mastic',
+      'BONDX PU Topcoat': '/products/bondx-pu-topcoat',
+      'BONDX PU Clear Coat': '/products/bondx-pu-clear-coat',
+      'WBOND HR 500°C': '/products/wbond-hr500',
+      'WBOND HR CLEAR 250°C': '/products/wbond-hr-clear250',
+      'HAWKY Antifouling': '/products/hawky-antifouling',
+      'HAWKY Anti-Corrosive Paint': '/products/hawky-anti-corrosive-paint',
+      'HAWKY Primers & Topcoats': '/products/hawky-primers-topcoats',
+      'STEPIN Floor Coating System': '/products/stepin-floor-coating-system'
+    };
+    
+    return productMap[productName] || '/products/maple-interior';
+  };
+
   const itemsPerPage = 3;
   const totalPages = Math.ceil(products.length / itemsPerPage);
 
@@ -398,11 +439,11 @@ const ProductsCarousel: React.FC = () => {
   };
 
   return (
-    <section id="products" className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+    <section id="products" className="py-16 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-700 mb-4">Our Products</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Our Products</h2>
+          <p className="text-xl text-slate-700 max-w-3xl mx-auto">
             Discover our comprehensive range of premium coatings designed for every application, from decorative finishes to industrial protection.
           </p>
         </div>
@@ -414,7 +455,7 @@ const ProductsCarousel: React.FC = () => {
               <div
                 key={product.id}
                 onClick={() => setSelectedProduct(product)}
-                className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer border border-slate-200 hover:border-blue-300"
+                className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer border border-slate-200 hover:border-slate-400"
               >
                 <div className="relative overflow-hidden rounded-lg mb-4">
                   <img
@@ -425,15 +466,15 @@ const ProductsCarousel: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
                 </div>
                 
-                <h3 className="text-lg font-bold text-slate-700 mb-2 group-hover:text-blue-600 transition-colors duration-200">
+                <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-emerald-600 transition-colors duration-200">
                   {product.name}
                 </h3>
                 
-                <p className="text-slate-600 text-sm mb-3 line-clamp-2">
+                <p className="text-slate-700 text-sm mb-3 line-clamp-2">
                   {product.description}
                 </p>
                 
-                <div className="text-xs text-slate-500">
+                <div className="text-xs text-slate-600">
                   <span className="font-semibold">Categories: </span>
                   <span>{product.subcategories.length} variants</span>
                 </div>
@@ -468,7 +509,7 @@ const ProductsCarousel: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                  index === currentIndex ? 'bg-blue-500 shadow-lg' : 'bg-slate-300'
+                  index === currentIndex ? 'bg-slate-500 shadow-lg' : 'bg-slate-300'
                 }`}
               />
             ))}
@@ -477,10 +518,10 @@ const ProductsCarousel: React.FC = () => {
 
         {/* Product Popup Modal */}
         {selectedProduct && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4">
             <div className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200">
               {/* Header */}
-              <div className="sticky top-0 bg-gradient-to-r from-slate-600 to-blue-600 text-white p-6 rounded-t-2xl flex justify-between items-center">
+              <div className="sticky top-0 bg-gradient-to-r from-slate-600 to-gray-600 text-white p-6 rounded-t-2xl flex justify-between items-center">
                 <h2 className="text-2xl font-bold">{selectedProduct.name}</h2>
                 <button
                   onClick={closePopup}
@@ -502,8 +543,8 @@ const ProductsCarousel: React.FC = () => {
 
                 {/* Product Description */}
                 <div className="mb-6">
-                  <h3 className="text-xl font-bold text-slate-700 mb-3">Product Overview</h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <h3 className="text-xl font-bold text-slate-800 mb-3">Product Overview</h3>
+                  <p className="text-slate-700 leading-relaxed">
                     {selectedProduct.detailedDescription}
                   </p>
                 </div>
@@ -512,14 +553,14 @@ const ProductsCarousel: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                   {/* Features */}
                   <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
-                    <h4 className="font-bold text-slate-700 mb-3 flex items-center">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                    <h4 className="font-bold text-slate-800 mb-3 flex items-center">
+                      <div className="w-2 h-2 bg-slate-500 rounded-full mr-2"></div>
                       Key Features
                     </h4>
                     <ul className="space-y-2">
                       {selectedProduct.features.map((feature, index) => (
-                        <li key={index} className="text-slate-600 text-sm flex items-start">
-                          <span className="text-blue-500 mr-2">•</span>
+                        <li key={index} className="text-slate-700 text-sm flex items-start">
+                          <span className="text-slate-500 mr-2">•</span>
                           {feature}
                         </li>
                       ))}
@@ -527,15 +568,15 @@ const ProductsCarousel: React.FC = () => {
                   </div>
 
                   {/* Applications */}
-                  <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
-                    <h4 className="font-bold text-slate-700 mb-3 flex items-center">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <h4 className="font-bold text-slate-800 mb-3 flex items-center">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mr-2"></div>
                       Applications
                     </h4>
                     <ul className="space-y-2">
                       {selectedProduct.applications.map((application, index) => (
-                        <li key={index} className="text-slate-600 text-sm flex items-start">
-                          <span className="text-blue-600 mr-2">•</span>
+                        <li key={index} className="text-slate-700 text-sm flex items-start">
+                          <span className="text-gray-600 mr-2">•</span>
                           {application}
                         </li>
                       ))}
@@ -543,15 +584,15 @@ const ProductsCarousel: React.FC = () => {
                   </div>
 
                   {/* Technical Specs */}
-                  <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
-                    <h4 className="font-bold text-slate-700 mb-3 flex items-center">
-                      <div className="w-2 h-2 bg-slate-600 rounded-full mr-2"></div>
+                  <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
+                    <h4 className="font-bold text-slate-800 mb-3 flex items-center">
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
                       Technical Specs
                     </h4>
                     <ul className="space-y-2">
                       {selectedProduct.technicalSpecs.map((spec, index) => (
-                        <li key={index} className="text-slate-600 text-sm flex items-start">
-                          <span className="text-slate-600 mr-2">•</span>
+                        <li key={index} className="text-slate-700 text-sm flex items-start">
+                          <span className="text-blue-600 mr-2">•</span>
                           {spec}
                         </li>
                       ))}
@@ -560,16 +601,20 @@ const ProductsCarousel: React.FC = () => {
                 </div>
 
                 {/* Product Categories with Items */}
-                <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-6 border border-slate-200">
-                  <h4 className="font-bold text-slate-700 mb-4 text-lg">Product Categories</h4>
+                <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-xl p-6 border border-slate-200">
+                  <h4 className="font-bold text-slate-800 mb-4 text-lg">Product Categories</h4>
                   <div className="space-y-4">
                     {selectedProduct.subcategories.map((category, index) => (
-                      <div key={index} className="border-l-4 border-blue-500 pl-4">
-                        <h5 className="font-semibold text-slate-700 mb-2 text-base">{category.name}</h5>
+                      <div key={index} className="border-l-4 border-slate-500 pl-4">
+                        <h5 className="font-semibold text-slate-800 mb-2 text-base">{category.name}</h5>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                           {category.items.map((item, itemIndex) => (
-                            <div key={itemIndex} className="bg-white rounded-lg p-3 border border-blue-200 shadow-sm">
-                              <span className="text-slate-700 font-medium text-sm">{item}</span>
+                            <div 
+                              key={itemIndex} 
+                              onClick={() => handleProductItemClick(item)}
+                              className="bg-white rounded-lg p-3 border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-400 cursor-pointer transition-all duration-200 group"
+                            >
+                              <span className="text-slate-800 font-medium text-sm group-hover:text-slate-600">{item}</span>
                             </div>
                           ))}
                         </div>

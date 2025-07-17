@@ -73,11 +73,11 @@ const ProjectGallery: React.FC = () => {
   };
 
   return (
-    <section id="gallery" className="py-16 bg-gradient-to-br from-blue-100 via-slate-100 to-blue-100">
+    <section id="gallery" className="py-16 bg-gradient-to-br from-slate-50 via-purple-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-slate-700 mb-4">Project Gallery</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Project Gallery</h2>
+          <p className="text-xl text-slate-700 max-w-3xl mx-auto">
             Discover our expertise through a showcase of successful projects across residential, industrial, marine, and specialized coating applications.
           </p>
         </div>
@@ -93,8 +93,8 @@ const ProjectGallery: React.FC = () => {
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg'
-                  : 'bg-white text-slate-600 hover:bg-blue-50 border border-slate-300'
+                  ? 'bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-lg'
+                  : 'bg-white text-slate-700 hover:bg-slate-50 border border-slate-300'
               }`}
             >
               {category}
@@ -120,14 +120,14 @@ const ProjectGallery: React.FC = () => {
                     <Eye className="text-white opacity-0 group-hover:opacity-100 h-12 w-12 transition-opacity duration-300" />
                   </div>
                   <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                    <span className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                       {project.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-slate-700 mb-2">{project.title}</h3>
-                  <p className="text-slate-600">{project.description}</p>
+                  <h3 className="text-xl font-bold text-slate-800 mb-2">{project.title}</h3>
+                  <p className="text-slate-700">{project.description}</p>
                 </div>
               </div>
             ))}
@@ -160,7 +160,7 @@ const ProjectGallery: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                  index === currentIndex ? 'bg-blue-500 shadow-lg' : 'bg-slate-300'
+                  index === currentIndex ? 'bg-purple-500 shadow-lg' : 'bg-slate-300'
                 }`}
               />
             ))}

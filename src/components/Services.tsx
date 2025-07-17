@@ -46,8 +46,8 @@ const Services: React.FC = () => {
     <section id="services" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-700 mb-4">Our Services</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Our Services</h2>
+          <p className="text-xl text-slate-700 max-w-3xl mx-auto">
             Comprehensive coating solutions backed by expert knowledge, cutting-edge technology, and unmatched customer support.
           </p>
         </div>
@@ -56,26 +56,26 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-blue-300"
+              className="group bg-gradient-to-br from-slate-50 to-purple-100 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-purple-200 hover:border-purple-400"
             >
               <div className="mb-6">
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 w-16 h-16 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="bg-gradient-to-r from-purple-500 to-purple-600 w-16 h-16 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
               </div>
               
-              <h3 className="text-xl font-bold text-slate-700 mb-4 group-hover:text-blue-600 transition-colors duration-200">
+              <h3 className="text-xl font-bold text-purple-800 mb-4 group-hover:text-purple-600 transition-colors duration-200">
                 {service.title}
               </h3>
               
-              <p className="text-slate-600 mb-6 leading-relaxed">
+              <p className="text-slate-700 mb-6 leading-relaxed">
                 {service.description}
               </p>
               
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  <li key={featureIndex} className="flex items-center text-sm text-slate-700">
+                    <div className="w-2 h-2 bg-slate-500 rounded-full mr-3"></div>
                     {feature}
                   </li>
                 ))}
@@ -85,14 +85,14 @@ const Services: React.FC = () => {
         </div>
 
         {/* Additional Info Section */}
-        <div className="mt-16 bg-gradient-to-r from-slate-600 to-blue-600 rounded-2xl p-8 text-white text-center shadow-xl border border-slate-300">
+        <div className="mt-16 bg-gradient-to-r from-slate-600 to-purple-600 rounded-2xl p-8 text-white text-center shadow-xl border border-slate-300">
           <h3 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
-          <p className="text-blue-100 mb-6 text-lg">
+          <p className="text-slate-100 mb-6 text-lg">
             Contact our experts today for a consultation and discover how our premium coatings can transform your project.
           </p>
           <button 
             onClick={() => scrollToSection('contact')}
-            className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="bg-white text-slate-600 hover:bg-slate-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             Get Expert Consultation
           </button>

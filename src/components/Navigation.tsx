@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDown, Menu, X} from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 interface DropdownItem {
   name: string;
@@ -11,7 +12,7 @@ interface DropdownItem {
 interface DropdownSubcategory {
   name: string;
   id: string;
-  items?: string[];
+  items?: { label: string; route: string }[];
 }
 
 const Navigation: React.FC = () => {
@@ -19,6 +20,8 @@ const Navigation: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(null);
   const timeoutRef = useRef<number | null>(null);
+  const navigate = useNavigate();
+
   const productCategories: DropdownItem[] = [
     {
       name: 'Decorative Paints',
@@ -28,26 +31,24 @@ const Navigation: React.FC = () => {
           name: 'Interior',
           id: 'interior',
           items: [
-            'MAPLE INTERIOR',
-            'MAPLE LUXURY INTERIOR', 
-            'MAPLE ANTI FUNGAL INTERIOR'
+            { label: 'MAPLE INTERIOR', route: '/products/maple-interior' },
+            { label: 'MAPLE LUXURY INTERIOR', route: '/products/maple-luxury-interior' },
+            { label: 'MAPLE ANTI FUNGAL INTERIOR', route: '/products/maple-anti-fungal-interior' }
           ]
         },
         {
           name: 'Exterior',
           id: 'exterior',
           items: [
-            'ALLURA EXTERIOR',
-            'ALLURA LUXURY EXTERIOR',
-            'ALLURA ANTI FUNGAL EXTERIOR'
+            { label: 'ALLURA EXTERIOR', route: '/products/allura-exterior' },
+            { label: 'ALLURA LUXURY EXTERIOR', route: '/products/allura-luxury-exterior' },
+            { label: 'ALLURA ANTI FUNGAL EXTERIOR', route: '/products/allura-anti-fungal-exterior' }
           ]
         },
         {
           name: 'Enamel',
           id: 'enamel',
-          items: [
-            'ENAMELS'
-          ]
+          items: [{ label: 'ENAMELS', route: '/products/enamels' }]
         }
       ]
     },
@@ -58,12 +59,12 @@ const Navigation: React.FC = () => {
         {
           name: 'Wood Stains',
           id: 'wood-stains',
-          items: ['WOODVIBE 2K PU Wood Stains - Matte-Glossy']
+          items: [{ label: 'WOODVIBE 2K PU Wood Stains - Matte-Glossy', route: '/products/woodvibe-stains' }]
         },
         {
           name: 'Clear Coats',
           id: 'clear-coats',
-          items: ['WOODVIBE 2K PU Clear Coats/Varnishes']
+          items: [{ label: 'WOODVIBE 2K PU Clear Coats/Varnishes', route: '/products/woodvibe-clear-coats' }]
         }
       ]
     },
@@ -74,12 +75,15 @@ const Navigation: React.FC = () => {
         {
           name: 'Interior Textures',
           id: 'interior-textures',
-          items: ['Interior Textured Finishes']
+          items: [{ label: 'Interior Textured Finishes', route: '/products/interior-textured-finishes' }]
         },
         {
           name: 'Exterior Textures',
           id: 'exterior-textures',
-          items: ['Exterior Textured Finishes', 'Stucco Paint']
+          items: [
+            { label: 'Exterior Textured Finishes', route: '/products/exterior-textured-finishes' },
+            { label: 'Stucco Paint', route: '/products/stucco-paint' }
+          ]
         }
       ]
     },
@@ -91,18 +95,18 @@ const Navigation: React.FC = () => {
           name: 'Primers',
           id: 'primers',
           items: [
-            'Grippa Interior Primer',
-            'Grippa Exterior Primer',
-            'Grippa Barrier Coating',
-            'Grippa Dampproof Primer'
+            { label: 'Grippa Interior Primer', route: '/products/grippa-interior-primer' },
+            { label: 'Grippa Exterior Primer', route: '/products/grippa-exterior-primer' },
+            { label: 'Grippa Barrier Coating', route: '/products/grippa-barrier-coating' },
+            { label: 'Grippa Dampproof Primer', route: '/products/grippa-dampproof-primer' }
           ]
         },
         {
           name: 'Putty & Fillers',
           id: 'putty-fillers',
           items: [
-            'Sliko ACRYLIC INT/EXT PUTTY',
-            'Sliko CRACKFILL'
+            { label: 'Sliko ACRYLIC INT/EXT PUTTY', route: '/products/sliko-acrylic-putty' },
+            { label: 'Sliko CRACKFILL', route: '/products/sliko-crackfill' }
           ]
         }
       ]
@@ -115,24 +119,24 @@ const Navigation: React.FC = () => {
           name: 'Epoxy Systems',
           id: 'epoxy-systems',
           items: [
-            'ZBOND High Build Epoxy Primer',
-            'ZBOND Epoxy Mastic Coatings'
+            { label: 'ZBOND High Build Epoxy Primer', route: '/products/zbond-epoxy-primer' },
+            { label: 'ZBOND Epoxy Mastic Coatings', route: '/products/zbond-epoxy-mastic' }
           ]
         },
         {
           name: 'PU Coatings',
           id: 'pu-coatings',
           items: [
-            'BONDX PU Topcoat',
-            'BONDX PU Clear Coat'
+            { label: 'BONDX PU Topcoat', route: '/products/bondx-pu-topcoat' },
+            { label: 'BONDX PU Clear Coat', route: '/products/bondx-pu-clear-coat' }
           ]
         },
         {
           name: 'High-Temperature Coatings',
           id: 'high-temperature-coatings',
           items: [
-            'WBOND HR 500°C',
-            'WBOND HR CLEAR 250°C'
+            { label: 'WBOND HR 500°C', route: '/products/wbond-hr500' },
+            { label: 'WBOND HR CLEAR 250°C', route: '/products/wbond-hr-clear250' }
           ]
         }
       ]
@@ -145,9 +149,9 @@ const Navigation: React.FC = () => {
           name: 'Marine Protection',
           id: 'marine-protection',
           items: [
-            'HAWKY Antifouling',
-            'HAWKY Anti-Corrosive Paint',
-            'HAWKY Primers & Topcoats'
+            { label: 'HAWKY Antifouling', route: '/products/hawky-antifouling' },
+            { label: 'HAWKY Anti-Corrosive Paint', route: '/products/hawky-anti-corrosive-paint' },
+            { label: 'HAWKY Primers & Topcoats', route: '/products/hawky-primers-topcoats' }
           ]
         }
       ]
@@ -159,16 +163,14 @@ const Navigation: React.FC = () => {
         {
           name: 'Floor Systems',
           id: 'floor-systems',
-          items: ['STEPIN Floor Coating System']
+          items: [{ label: 'STEPIN Floor Coating System', route: '/products/stepin-floor-coating-system' }]
         }
       ]
     }
   ];
 
   const handleMouseEnter = (dropdown: string) => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setActiveDropdown(dropdown);
   };
 
@@ -183,39 +185,33 @@ const Navigation: React.FC = () => {
     setActiveSubDropdown(subDropdown);
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navHeight = 64;
-      const elementPosition = element.offsetTop - navHeight;
-      
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
-    }
+  const handleProductClick = (route: string) => {
+    navigate(route);
     setIsMenuOpen(false);
-  };
-
-  const handleProductClick = (productId: string) => {
-    scrollToSection('products');
-    
-    setTimeout(() => {
-      const event = new CustomEvent('navigateToProduct', {
-        detail: { productId }
-      });
-      window.dispatchEvent(event);
-    }, 500);
-    
     setActiveDropdown(null);
     setActiveSubDropdown(null);
   };
 
+  const scrollToSection = (sectionId: string) => {
+  if (location.pathname !== '/') {
+    navigate(`/?scrollTo=${sectionId}`);
+  } else {
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const navHeight = 64;
+        const elementPosition = element.offsetTop - navHeight;
+        window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      }
+    }, 100); // small delay ensures DOM is ready
+  }
+  setIsMenuOpen(false);
+};
+
+
   useEffect(() => {
     return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, []);
 
@@ -228,20 +224,14 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-slate-50 via-blue-50 to-slate-50 shadow-lg sticky top-0 z-50 border-b border-slate-200">
+    <nav className="bg-white shadow-md sticky top-0 z-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-
-          {/* Logo */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('home')}>
-              <img src="/logo.jpg" 
-              alt="TropiGlow Logo"
-              className="h-10 w-10 object-contain rounded-lg shadow-sm"
-              />
+            <img src="/logo.jpg" alt="Logo" className="h-10 w-10 object-contain rounded-lg" />
             <span className="text-2xl font-bold text-slate-700">TropiGlow</span>
-        </div>
+          </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <div
@@ -252,46 +242,40 @@ const Navigation: React.FC = () => {
               >
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className="flex items-center space-x-1 text-slate-600 hover:text-blue-600 font-semibold transition-colors duration-200 text-sm tracking-wide"
+                  className="flex items-center space-x-1 text-slate-600 hover:text-blue-600 font-semibold text-sm"
                 >
                   <span>{item.name}</span>
                   {item.name === 'PRODUCTS' && <ChevronDown className="h-4 w-4" />}
                 </button>
 
-                {/* Products Dropdown */}
                 {item.name === 'PRODUCTS' && activeDropdown === 'products' && (
-                  <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-xl border border-slate-200 py-3 z-50">
+                  <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-xl border py-3 z-50">
                     {productCategories.map((category, index) => (
                       <div key={index} className="group relative">
                         <div
-                          className="px-5 py-3 text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-slate-50 cursor-pointer flex items-center justify-between transition-all duration-200"
-                          onClick={() => handleProductClick(category.id)}
+                          className="px-5 py-3 text-slate-700 hover:bg-blue-50 cursor-pointer flex items-center justify-between"
                           onMouseEnter={() => handleSubMouseEnter(category.id)}
                         >
                           <span className="font-semibold">{category.name}</span>
                           <ChevronDown className="h-4 w-4 rotate-[-90deg]" />
                         </div>
 
-                        {/* Subcategory Dropdown */}
                         {activeSubDropdown === category.id && (
-                          <div className="absolute left-full top-0 ml-2 w-80 bg-white rounded-xl shadow-xl border border-slate-200 py-3 z-50">
+                          <div className="absolute left-full top-0 ml-2 w-80 bg-white rounded-xl shadow-xl border py-3 z-50">
                             {category.subcategories?.map((sub, subIndex) => (
                               <div key={subIndex} className="group/sub relative">
-                                <div
-                                  className="px-5 py-2 text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-slate-50 cursor-pointer font-medium border-b border-slate-100 last:border-b-0"
-                                  onClick={() => handleProductClick(category.id)}
-                                >
+                                <div className="px-5 py-2 font-medium text-slate-700 border-b last:border-0">
                                   {sub.name}
                                 </div>
                                 {sub.items && (
-                                  <div className="px-8 py-1 space-y-1">
+                                  <div className="px-6 py-1 space-y-1">
                                     {sub.items.map((item, itemIndex) => (
                                       <div
                                         key={itemIndex}
-                                        className="text-slate-600 hover:text-blue-600 cursor-pointer text-sm py-1 hover:bg-blue-50 px-2 rounded transition-all duration-200"
-                                        onClick={() => handleProductClick(category.id)}
+                                        className="text-sm text-slate-600 hover:text-blue-600 cursor-pointer hover:bg-blue-50 px-2 py-1 rounded"
+                                        onClick={() => handleProductClick(item.route)}
                                       >
-                                        • {item}
+                                        • {item.label}
                                       </div>
                                     ))}
                                   </div>
@@ -306,18 +290,16 @@ const Navigation: React.FC = () => {
                 )}
               </div>
             ))}
-            {/* WhatsApp Icon Desktop */}
             <a
               href="https://wa.me/9609310373"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-500 hover:text-green-600 transition-colors duration-200"
+              className="text-green-500 hover:text-green-600"
             >
               <FaWhatsapp className="h-6 w-6" />
             </a>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -328,9 +310,8 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-slate-200 py-4 bg-white">
+          <div className="md:hidden py-4 bg-white border-t">
             {navItems.map((item) => (
               <div key={item.name} className="py-2">
                 <button
@@ -339,19 +320,6 @@ const Navigation: React.FC = () => {
                 >
                   {item.name}
                 </button>
-                {item.name === 'PRODUCTS' && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {productCategories.map((category, index) => (
-                      <button
-                        key={index}
-                        onClick={() => handleProductClick(category.id)}
-                        className="block w-full text-left text-sm text-slate-500 hover:text-blue-600 py-1"
-                      >
-                        {category.name}
-                      </button>
-                    ))}
-                  </div>
-                )}
               </div>
             ))}
           </div>
