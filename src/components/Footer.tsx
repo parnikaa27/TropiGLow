@@ -65,11 +65,15 @@ const Footer: React.FC = () => {
             <h3 className="text-2xl font-semibold mb-6 text-slate-800">Contact</h3>
             <div className="space-y-4 text-base">
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-blue-500" />
-                <a href="mailto:sales.cenpro@opromaldives.com" className="hover:text-blue-600">
-                  sales.cenpro@opromaldives.com
-                </a>
+                <Mail className="h-6 w-6 min-w-[17px] text-blue-500" />
+                  <a
+                    href="mailto:sales.cenpro@opromaldives.com"
+                    className="hover:text-blue-600 text-base"
+                  >
+                    sales.cenpro@opromaldives.com
+                  </a>
               </div>
+
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-500" />
                 <span>+960 9310373</span>
