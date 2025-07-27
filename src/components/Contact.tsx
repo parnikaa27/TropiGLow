@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -67,7 +68,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-16 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">Get in Touch</h2>
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Contact Us</h2>
           <p className="text-xl text-slate-700 max-w-3xl mx-auto">
             We'd love to hear from you. Whether you're planning a project or seeking a tailored solution, reach out today.
           </p>
@@ -113,6 +114,23 @@ const Contact: React.FC = () => {
                     <h4 className="font-semibold text-slate-800 mb-1">Email</h4>
                     <p className="text-slate-700">sales.cenpro@opromaldives.com</p>
                   </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-lg shadow-lg">
+                    <FaWhatsapp className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                  <h4 className="font-semibold text-slate-800 mb-1">WhatsApp</h4>
+                    <a
+                      href="https://wa.me/9609310373"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-600 hover:text-green-700 font-medium underline"
+                    >
+                      Chat with us on WhatsApp
+                    </a>
+                    </div>
                 </div>
               </div>
             </div>

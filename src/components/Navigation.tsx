@@ -203,7 +203,7 @@ const Navigation: React.FC = () => {
         const elementPosition = element.offsetTop - navHeight;
         window.scrollTo({ top: elementPosition, behavior: 'smooth' });
       }
-    }, 100); // small delay ensures DOM is ready
+    }, 100); 
   }
   setIsMenuOpen(false);
 };
@@ -218,8 +218,8 @@ const Navigation: React.FC = () => {
   const navItems = [
     { name: 'HOME', id: 'home' },
     { name: 'PRODUCTS', id: 'products' },
-    { name: 'PROJECT GALLERY', id: 'gallery' },
     { name: 'OUR SERVICES', id: 'services' },
+    { name: 'PROJECT GALLERY', id: 'gallery' },
     { name: 'CONTACT US', id: 'contact' }
   ];
 
@@ -229,7 +229,6 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('home')}>
             <img src="/logo.jpg" alt="Logo" className="h-10 w-10 object-contain rounded-lg" />
-            <span className="text-2xl font-bold text-slate-700">TropiGlow</span>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">

@@ -77,8 +77,8 @@ const HomePage = () => {
     <div className="min-h-screen">
       <Hero />
       <ProductsCarousel />
-      <ProjectGallery />
       <Services />
+      <ProjectGallery />
       <Contact />
     </div>
   );
