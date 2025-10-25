@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Welcome to <span className="text-purple-400">TropiGlow</span>
+              Welcome to <span className="text-teal-400">TropiGlow</span>
             </h1>
             <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
               {slides[currentSlide].subtitle}
@@ -105,13 +105,13 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
               <button 
                 onClick={() => scrollToSection('products')}
-                className="bg-gradient-to-r from-slate-600 to-gray-600 hover:from-slate-700 hover:to-gray-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                className="border-2 border-slate-300 bg-gradient-to-r from-slate-600 to-gray-600 hover:from-slate-700 hover:to-gray-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 Explore Products
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="border-2 border-slate-300 text-white hover:bg-slate-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 backdrop-blur-sm"
+                className="border-2 border-slate-300 bg-gradient-to-r from-slate-600 to-gray-600 hover:from-slate-700 hover:to-gray-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 Contact Us Today
               </button>

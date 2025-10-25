@@ -64,7 +64,7 @@ const Navigation: React.FC = () => {
         {
           name: 'Clear Coats',
           id: 'clear-coats',
-          items: [{ label: 'WOODVIBE 2K PU Clear Coats/Varnishes', route: '/products/woodvibe-clear-coats' }]
+          items: [{ label: 'WOODVIBE 2K PU Clear Coats', route: '/products/woodvibe-clear-coats' }]
         }
       ]
     },

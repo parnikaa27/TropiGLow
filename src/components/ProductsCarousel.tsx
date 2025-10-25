@@ -24,6 +24,7 @@ interface ProductCategory {
 const ProductsCarousel: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const navigate = useNavigate();
 
   const products: Product[] = [
@@ -361,6 +362,15 @@ const ProductsCarousel: React.FC = () => {
     }
   ];
 
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 4000); // Auto-advance every 4 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
   const navigateToProduct = (productId: string) => {
     const product = products.find(p => p.id === productId);
     if (product) {
@@ -422,20 +432,35 @@ const ProductsCarousel: React.FC = () => {
     return productMap[productName] || '/products/maple-interior';
   };
 
-  const itemsPerPage = 3;
-  const totalPages = Math.ceil(products.length / itemsPerPage);
-
-  const getCurrentProducts = () => {
-    const startIndex = currentIndex * itemsPerPage;
-    return products.slice(startIndex, startIndex + itemsPerPage);
-  };
-
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % totalPages);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev + 1) % products.length);
+    setTimeout(() => setIsTransitioning(false), 300);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
+    setTimeout(() => setIsTransitioning(false), 300);
+  };
+
+  const goToSlide = (index: number) => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex(index);
+    setTimeout(() => setIsTransitioning(false), 300);
+  };
+
+  // Get visible products (current + next 2 for desktop, current + next 1 for tablet, current only for mobile)
+  const getVisibleProducts = () => {
+    const visibleProducts = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i) % products.length;
+      visibleProducts.push({ ...products[index], displayIndex: i });
+    }
+    return visibleProducts;
   };
 
   return (
@@ -448,73 +473,89 @@ const ProductsCarousel: React.FC = () => {
           </p>
         </div>
 
-        {/* Products Carousel */}
-        <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {getCurrentProducts().map((product) => (
-              <div
-                key={product.id}
-                onClick={() => setSelectedProduct(product)}
-                className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer border border-slate-200 hover:border-slate-400"
-              >
-                <div className="relative overflow-hidden rounded-lg mb-4">
-                  <img
-                    src={product.cardImage}
-                    alt={product.name}
-                    className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
-                </div>
-                
-                <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-emerald-600 transition-colors duration-200">
-                  {product.name}
-                </h3>
-                
-                <p className="text-slate-700 text-sm mb-3 line-clamp-2">
-                  {product.description}
-                </p>
-                
-                <div className="text-xs text-slate-600">
-                  <span className="font-semibold">Categories: </span>
-                  <span>{product.subcategories.length} variants</span>
-                </div>
+        {/* Infinite Carousel */}
+        <div className="relative overflow-hidden">
+          <div className="flex items-center justify-center">
+            {/* Navigation Arrow - Left */}
+            <button
+              onClick={prevSlide}
+              disabled={isTransitioning}
+              className="absolute left-0 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-xl transition-all duration-200 border border-slate-200 disabled:opacity-50"
+            >
+              <ChevronLeft className="h-6 w-6 text-slate-600" />
+            </button>
+
+            {/* Products Container */}
+            <div className="w-full max-w-6xl mx-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {getVisibleProducts().map((product, index) => (
+                  <div
+                    key={`${product.id}-${currentIndex}-${index}`}
+                    onClick={() => setSelectedProduct(product)}
+                    className={`group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer border border-slate-200 hover:border-slate-400 ${
+                      isTransitioning ? 'opacity-70' : 'opacity-100'
+                    } ${
+                      index === 0 ? 'lg:scale-105 lg:z-10' : index === 1 ? 'hidden md:block' : 'hidden lg:block'
+                    }`}
+                    style={{
+                      transitionDelay: `${index * 100}ms`
+                    }}
+                  >
+                    <div className="relative overflow-hidden rounded-lg mb-4">
+                      <img
+                        src={product.cardImage}
+                        alt={product.name}
+                        className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
+                      {index === 0 && (
+                        <div className="absolute top-2 right-2 bg-slate-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                          Featured
+                        </div>
+                      )}
+                    </div>
+                    
+                    <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-slate-600 transition-colors duration-200">
+                      {product.name}
+                    </h3>
+                    
+                    <p className="text-slate-700 text-sm mb-3 line-clamp-2">
+                      {product.description}
+                    </p>
+                    
+                    <div className="text-xs text-slate-600">
+                      <span className="font-semibold">Categories: </span>
+                      <span>{product.subcategories.length} variants</span>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Navigation Arrow - Right */}
+            <button
+              onClick={nextSlide}
+              disabled={isTransitioning}
+              className="absolute right-0 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-xl transition-all duration-200 border border-slate-200 disabled:opacity-50"
+            >
+              <ChevronRight className="h-6 w-6 text-slate-600" />
+            </button>
           </div>
 
-          {/* Navigation Arrows */}
-          {totalPages > 1 && (
-            <>
-              <button
-                onClick={prevSlide}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-xl transition-all duration-200 border border-slate-200"
-              >
-                <ChevronLeft className="h-6 w-6 text-slate-600" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-xl transition-all duration-200 border border-slate-200"
-              >
-                <ChevronRight className="h-6 w-6 text-slate-600" />
-              </button>
-            </>
-          )}
-        </div>
-
-        {/* Pagination Dots */}
-        {totalPages > 1 && (
+          {/* Carousel Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
-            {Array.from({ length: totalPages }).map((_, index) => (
+            {products.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => goToSlide(index)}
+                disabled={isTransitioning}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
                   index === currentIndex ? 'bg-slate-500 shadow-lg' : 'bg-slate-300'
-                }`}
+                } disabled:opacity-50`}
               />
             ))}
           </div>
-        )}
+        </div>
 
         {/* Product Popup Modal */}
         {selectedProduct && (

@@ -69,10 +69,10 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-gray-500 to-slate-600 rounded-xl p-4 shadow-xl">
-                <div className="text-center">
+               {/* <div className="text-center">
                   <div className="text-2xl font-bold">15-20</div>
                   <div className="text-sm opacity-90">sq.ft/kg coverage</div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
