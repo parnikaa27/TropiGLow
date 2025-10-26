@@ -109,7 +109,7 @@ const BondxPuTopcoatPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Technical Specs */}
+        {/* Technical Specs 
         <section className="bg-white rounded-xl p-8 shadow-lg border">
           <h3 className="text-2xl font-bold text-slate-800 mb-6">Technical Specifications</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -127,7 +127,7 @@ const BondxPuTopcoatPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Applications & Use Cases */}
+        {/* Applications & Use Cases 
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-white rounded-xl p-8 shadow-lg border">
             <h3 className="text-xl font-bold text-slate-800 mb-4">Recommended For</h3>
@@ -155,7 +155,7 @@ const BondxPuTopcoatPage: React.FC = () => {
               ))}
             </ul>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA */}
         <section className="bg-yellow-500 text-white rounded-xl p-8 text-center">

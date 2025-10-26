@@ -8,17 +8,17 @@ const Hero: React.FC = () => {
     {
       title: "Premium Decorative Paints",
       subtitle: "Transform your spaces with our luxury interior and exterior solutions",
-      image: "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      image: "/hero1.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
     },
     {
       title: "Industrial Protective Coatings",
       subtitle: "Advanced epoxy and polyurethane systems for maximum protection",
-      image: "https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      image: "/hero2.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
     },
     {
       title: "Marine & High-Temperature Solutions",
       subtitle: "Specialized coatings engineered for extreme environments",
-      image: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      image: "/hero3.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
     }
   ];
 
@@ -69,14 +69,14 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 via-grey-900/70 to-slate-800/60"></div>
           </div>
         ))}
-      </div>
+      </div> 
 
-      {/* Content */}
+      {/* Content bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16*/}
       <div className="relative z-10 h-full flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Welcome to <span className="text-teal-400">TropiGlow</span>
+              Welcome to <span className="text-emerald-400 font-[cursive]">TropiGlow</span>
             </h1>
             <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
               {slides[currentSlide].subtitle}

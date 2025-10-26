@@ -96,8 +96,8 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-2xl font-semibold mb-6 text-slate-800">Address</h3>
             <address className="not-italic text-base text-slate-600 space-y-1 leading-relaxed">
-              <p>R.G. Tower – Ground and First Floor</p>
-              <p>Henveiru, Hithah Finivaa Magu</p>
+              <p>O'Shop – Ground Floor</p>
+              <p>H.Gasdhoshuge, Abadhaffehi Magu</p>
               <p>Malé, Maldives - 20084</p>
             </address>
           </div>

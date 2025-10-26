@@ -124,7 +124,7 @@ const AlluraExteriorPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Technical Specifications */}
+        {/* Technical Specifications 
         <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-200 mb-16">
           <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
             <Thermometer className="h-6 w-6 text-blue-600 mr-3" />
@@ -150,7 +150,7 @@ const AlluraExteriorPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Exterior Applications */}
+        {/* Exterior Applications
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Exterior Applications</h3>
@@ -190,7 +190,7 @@ const AlluraExteriorPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Exterior Application Process */}
+        {/* Exterior Application Process
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Exterior Surface Preparation</h3>
@@ -232,7 +232,7 @@ const AlluraExteriorPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Product Options */}
+        {/* Product Options 
         <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl p-8 text-white mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div>
@@ -272,7 +272,7 @@ const AlluraExteriorPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact CTA */}
         <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-200 text-center">

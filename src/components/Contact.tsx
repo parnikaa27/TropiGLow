@@ -77,27 +77,28 @@ const Contact: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg border border-purple-200">
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-500">
               <h3 className="text-2xl font-bold text-slate-800 mb-6">Contact Information</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-lg shadow-lg">
+                  <div className="bg-gradient-to-r from-slate-600 via-emerald-600 to-teal-600 p-3 rounded-lg shadow-lg">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-800 mb-1">Address</h4>
                     <p className="text-slate-700">
-                      Building: R.G. Tower – Ground and First Floor<br />
-                      Region: Henveiru<br />
-                      Road: Hithah Finivaa Magu <br />
+                      O’Shop<br />
+                      Ground Floor,<br />
+                      H.Gasdhoshuge, <br />
+                      Abadhaffehi Magu, Male', Maldives <br />
                       Postal code: 20084 <br />
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-lg shadow-lg">
+                  <div className="bg-gradient-to-r from-slate-600 via-emerald-600 to-teal-600 p-3 rounded-lg shadow-lg">
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -107,7 +108,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-lg shadow-lg">
+                  <div className="bg-gradient-to-r from-slate-600 via-emerald-600 to-teal-600 p-3 rounded-lg shadow-lg">
                     <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -117,7 +118,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-lg shadow-lg">
+                  <div className="bg-gradient-to-r from-slate-600 via-emerald-600 to-teal-600 p-3 rounded-lg shadow-lg">
                     <FaWhatsapp className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -152,7 +153,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-xl p-8 shadow-lg border border-purple-200">
+          <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-500">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">Send us a Message</h3>
             
             {submitStatus === 'success' ? (
@@ -240,7 +241,7 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-1"
+                  className="w-full bg-gradient-to-r from-slate-600 via-emerald-600 to-teal-600 hover:from-emerald-600 hover:to-emerald-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-1"
                 >
                   {isSubmitting ? (
                     <>

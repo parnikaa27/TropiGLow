@@ -127,7 +127,7 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Technical Specifications */}
+        {/* Technical Specifications 
         <div className="bg-white rounded-xl p-8 shadow-lg border border-teal-200 mb-16">
           <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
             <Thermometer className="h-6 w-6 text-teal-600 mr-3" />
@@ -151,9 +151,9 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        {/* Specialized Applications */}
+        {/* Specialized Applications 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-teal-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Specialized Applications</h3>
@@ -193,7 +193,7 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Specialized Application Process */}
+        {/* Specialized Application Process 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-teal-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Anti-Fungal Surface Preparation</h3>
@@ -234,8 +234,8 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Product Options */}
+*/}
+        {/* Product Options 
         <div className="bg-gradient-to-r from-teal-600 to-green-600 rounded-xl p-8 text-white mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div>
@@ -275,7 +275,7 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact CTA */}
         <div className="bg-white rounded-xl p-8 shadow-lg border border-teal-200 text-center">

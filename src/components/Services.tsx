@@ -56,26 +56,26 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-slate-50 to-purple-100 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-purple-200 hover:border-purple-400"
+              className="group bg-gradient-to-r from-slate-600 via-emerald-600 to-teal-600 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-teal-600 hover:border-emerald-400"
             >
               <div className="mb-6">
-                <div className="bg-gradient-to-r from-purple-500 to-purple-600 w-16 h-16 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 w-16 h-16 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
               </div>
               
-              <h3 className="text-xl font-bold text-purple-800 mb-4 group-hover:text-purple-600 transition-colors duration-200">
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-white transition-colors duration-200">
                 {service.title}
               </h3>
               
-              <p className="text-slate-700 mb-6 leading-relaxed">
+              <p className="text-white mb-6 leading-relaxed">
                 {service.description}
               </p>
               
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-slate-700">
-                    <div className="w-2 h-2 bg-slate-500 rounded-full mr-3"></div>
+                  <li key={featureIndex} className="flex items-center text-sm text-white">
+                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
                     {feature}
                   </li>
                 ))}
@@ -84,8 +84,8 @@ const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* Additional Info Section */}
-        <div className="mt-16 bg-gradient-to-r from-slate-600 to-purple-600 rounded-2xl p-8 text-white text-center shadow-xl border border-slate-300">
+        {/* Additional Info Section bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800*/}
+        <div className="mt-16 bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 rounded-2xl p-8 text-white text-center shadow-xl border border-slate-300">
           <h3 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
           <p className="text-slate-100 mb-6 text-lg">
             Contact our experts today for a consultation and discover how our premium coatings can transform your project.

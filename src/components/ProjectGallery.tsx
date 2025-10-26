@@ -73,7 +73,7 @@ const ProjectGallery: React.FC = () => {
   };
 
   return (
-    <section id="gallery" className="py-16 bg-gradient-to-br from-slate-50 via-purple-50 to-blue-50">
+    <section id="gallery" className="py-16 bg-gradient-to-r from-slate-50 via-emerald-50 to-teal-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-slate-800 mb-4">Project Gallery</h2>
@@ -93,7 +93,7 @@ const ProjectGallery: React.FC = () => {
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white shadow-lg'
                   : 'bg-white text-slate-700 hover:bg-slate-50 border border-slate-300'
               }`}
             >
@@ -120,7 +120,7 @@ const ProjectGallery: React.FC = () => {
                     <Eye className="text-white opacity-0 group-hover:opacity-100 h-12 w-12 transition-opacity duration-300" />
                   </div>
                   <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                    <span className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                       {project.category}
                     </span>
                   </div>
@@ -160,7 +160,7 @@ const ProjectGallery: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                  index === currentIndex ? 'bg-purple-500 shadow-lg' : 'bg-slate-300'
+                  index === currentIndex ? 'bg-emerald-500 shadow-lg' : 'bg-slate-300'
                 }`}
               />
             ))}

@@ -226,9 +226,9 @@ const Navigation: React.FC = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('home')}>
-            <img src="/logo.jpg" alt="Logo" className="h-10 w-10 object-contain rounded-lg" />
+            <img src="/logo_final.png" alt="Logo" className="h-20 w-26 object-contain rounded-lg" />
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -241,7 +241,7 @@ const Navigation: React.FC = () => {
               >
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className="flex items-center space-x-1 text-slate-600 hover:text-blue-600 font-semibold text-sm"
+                  className="flex items-center space-x-1 text-slate-600 hover:text-blue-600 font-semibold text-md"
                 >
                   <span>{item.name}</span>
                   {item.name === 'PRODUCTS' && <ChevronDown className="h-4 w-4" />}
