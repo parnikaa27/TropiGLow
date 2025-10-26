@@ -64,12 +64,12 @@ const MapleInteriorPage: React.FC = () => {
                 alt="MAPLE INTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl p-4 shadow-xl">
+             {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl p-4 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold">120-140</div>
                   <div className="text-sm opacity-90">sq.ft/ltr coverage</div>
                 </div>
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@ const MapleInteriorPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Application Instructions */}
+        {/* Application Instructions 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Surface Preparation</h3>
@@ -229,7 +229,7 @@ const MapleInteriorPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Available Options */}
         <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl p-8 text-white mb-16">
@@ -294,10 +294,24 @@ const MapleInteriorPage: React.FC = () => {
               Request Sample
             </button>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+          
+       {/* Downloadable Data Sheet link */}
+<div className="mt-6">
+<a
+href="/anti_fungal.pdf"
+download="Data Sheet.pdf"
+target="_blank"
+rel="noopener noreferrer"
+className="inline-block mt-3 text-sm underline font-medium text-teal-600 hover:text-teal-800"
+aria-label="Download Data Sheet"
+>
+Download Data Sheet
+</a>
+</div>
+</div>
+</div>
+</div>
+);
 };
 
 export default MapleInteriorPage;

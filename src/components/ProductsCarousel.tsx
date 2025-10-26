@@ -12,7 +12,7 @@ interface Product {
   detailedDescription: string;
   features: string[];
   applications: string[];
-  technicalSpecs: string[];
+  //technicalSpecs: string[];
 }
 
 interface ProductCategory {
@@ -77,13 +77,13 @@ const ProductsCarousel: React.FC = () => {
         'Ceiling Applications',
         'Decorative Finishes'
       ],
-      technicalSpecs: [
-        'Coverage: 120-140 sq.ft/ltr',
-        'Drying Time: 2-4 hours',
-        'Recoat Time: 4-6 hours',
-        'Finish: Matt to High Gloss',
-        'Shelf Life: 3 years'
-      ]
+      // technicalSpecs: [
+      //   'Coverage: 120-140 sq.ft/ltr',
+      //   'Drying Time: 2-4 hours',
+      //   'Recoat Time: 4-6 hours',
+      //   'Finish: Matt to High Gloss',
+      //   'Shelf Life: 3 years'
+      // ]
     },
     {
       id: 'wood-coatings',
@@ -119,13 +119,13 @@ const ProductsCarousel: React.FC = () => {
         'Architectural Millwork',
         'Marine Wood Applications'
       ],
-      technicalSpecs: [
-        'Pot Life: 4-6 hours',
-        'Dry to Touch: 30 minutes',
-        'Full Cure: 7 days',
-        'Hardness: 2H-3H',
-        'Temperature Resistance: -20°C to 80°C'
-      ]
+      // technicalSpecs: [
+      //   'Pot Life: 4-6 hours',
+      //   'Dry to Touch: 30 minutes',
+      //   'Full Cure: 7 days',
+      //   'Hardness: 2H-3H',
+      //   'Temperature Resistance: -20°C to 80°C'
+      // ]
     },
     {
       id: 'textured-finishes',
@@ -161,13 +161,13 @@ const ProductsCarousel: React.FC = () => {
         'Residential Decorating',
         'Architectural Accents'
       ],
-      technicalSpecs: [
-        'Texture Depth: 1-5mm',
-        'Coverage: 80-100 sq.ft/ltr',
-        'Working Time: 20-30 minutes',
-        'Curing Time: 24-48 hours',
-        'Temperature Range: 5°C to 35°C'
-      ]
+      // technicalSpecs: [
+      //   'Texture Depth: 1-5mm',
+      //   'Coverage: 80-100 sq.ft/ltr',
+      //   'Working Time: 20-30 minutes',
+      //   'Curing Time: 24-48 hours',
+      //   'Temperature Range: 5°C to 35°C'
+      // ]
     },
     {
       id: 'primer-putty',
@@ -211,13 +211,13 @@ const ProductsCarousel: React.FC = () => {
         'Crack Repair',
         'Substrate Sealing'
       ],
-      technicalSpecs: [
-        'Coverage: 100-120 sq.ft/ltr',
-        'Drying Time: 4-6 hours',
-        'Sanding Time: 6-8 hours',
-        'Overcoating: 6-24 hours',
-        'Film Thickness: 50-100 microns'
-      ]
+      // technicalSpecs: [
+      //   'Coverage: 100-120 sq.ft/ltr',
+      //   'Drying Time: 4-6 hours',
+      //   'Sanding Time: 6-8 hours',
+      //   'Overcoating: 6-24 hours',
+      //   'Film Thickness: 50-100 microns'
+      // ]
     },
     {
       id: 'protective-coatings',
@@ -272,15 +272,15 @@ const ProductsCarousel: React.FC = () => {
         'Industrial Furnaces',
         'Boiler Components'
       ],
-      technicalSpecs: [
-        'Dry Film Thickness: 200-500 microns',
-        'Pot Life: 2-4 hours',
-        'Service Temperature: -40°C to 500°C',
-        'Chemical Resistance: Excellent',
-        'Salt Spray Resistance: >1000 hours',
-        'Max Temperature: 500°C continuous',
-        'Thermal Cycling: Excellent'
-      ]
+      // technicalSpecs: [
+      //   'Dry Film Thickness: 200-500 microns',
+      //   'Pot Life: 2-4 hours',
+      //   'Service Temperature: -40°C to 500°C',
+      //   'Chemical Resistance: Excellent',
+      //   'Salt Spray Resistance: >1000 hours',
+      //   'Max Temperature: 500°C continuous',
+      //   'Thermal Cycling: Excellent'
+      // ]
     },
     {
       id: 'marine-coatings',
@@ -315,13 +315,13 @@ const ProductsCarousel: React.FC = () => {
         'Coastal Infrastructure',
         'Underwater Equipment'
       ],
-      technicalSpecs: [
-        'Antifouling Life: 36-60 months',
-        'Immersion Service: Continuous',
-        'Leaching Rate: Controlled',
-        'Adhesion: Excellent',
-        'Impact Resistance: High'
-      ]
+      // technicalSpecs: [
+      //   'Antifouling Life: 36-60 months',
+      //   'Immersion Service: Continuous',
+      //   'Leaching Rate: Controlled',
+      //   'Adhesion: Excellent',
+      //   'Impact Resistance: High'
+      // ]
     },
     {
       id: 'floor-coatings',
@@ -352,13 +352,13 @@ const ProductsCarousel: React.FC = () => {
         'Parking Garages',
         'Food Processing Areas'
       ],
-      technicalSpecs: [
-        'Compressive Strength: >80 MPa',
-        'Abrasion Resistance: <50mg',
-        'Chemical Resistance: Excellent',
-        'Service Life: 10-15 years',
-        'Application Temperature: 10-30°C'
-      ]
+      // technicalSpecs: [
+      //   'Compressive Strength: >80 MPa',
+      //   'Abrasion Resistance: <50mg',
+      //   'Chemical Resistance: Excellent',
+      //   'Service Life: 10-15 years',
+      //   'Application Temperature: 10-30°C'
+      // ]
     }
   ];
 
@@ -625,7 +625,7 @@ const ProductsCarousel: React.FC = () => {
                   </div>
 
                   {/* Technical Specs */}
-                  <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
+                  {/* <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
                     <h4 className="font-bold text-slate-800 mb-3 flex items-center">
                       <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
                       Technical Specs
@@ -638,7 +638,7 @@ const ProductsCarousel: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Product Categories with Items */}
