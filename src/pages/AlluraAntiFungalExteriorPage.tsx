@@ -298,10 +298,25 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
               Request Protection Sample
             </button>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+        {/* Downloadable Data Sheet link */}
+<div className="mt-6">
+{/* Place the PDF file in your public/assets folder at: /public/assets/Allura-AntiFungal-DataSheet.pdf */}
+<a
+href="/anti_fungal.pdf"
+download="Data Sheet.pdf"
+target="_blank"
+rel="noopener noreferrer"
+className="inline-block mt-3 text-sm underline font-medium text-teal-600 hover:text-teal-800"
+aria-label="Download Data Sheet"
+>
+Download Data Sheet
+</a>
+</div>
+</div>
+</div>
+</div>
+);
 };
+
 
 export default AlluraAntiFungalExteriorPage;
