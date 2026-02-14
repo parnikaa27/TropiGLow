@@ -59,8 +59,8 @@ const ProductsCarousel: React.FC = () => {
         }
       ],
       description: 'Premium interior and exterior decorative solutions for residential and commercial spaces',
-      cardImage: '/enamels.png',
-      popupImage: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      cardImage: '/mi2.jpeg',
+      popupImage: '/mi1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'Our decorative paint range offers superior coverage, durability, and aesthetic appeal. From luxurious interior finishes to weather-resistant exterior coatings, each product is formulated with advanced technology to deliver exceptional performance and long-lasting beauty.',
       features: [
         'Superior Coverage & Opacity',
@@ -101,8 +101,8 @@ const ProductsCarousel: React.FC = () => {
         }
       ],
       description: 'Professional wood finishing solutions for furniture, flooring, and architectural applications',
-      cardImage: '/WhatsApp Image 2025-06-19 at 12.09.42.jpeg',
-      popupImage: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      cardImage: '/wc1.jpeg',
+      popupImage: '/ws1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'WOODVIBE series represents the pinnacle of wood coating technology. Our 2K PU systems provide exceptional durability, chemical resistance, and aesthetic enhancement for all wood surfaces.',
       features: [
         '2K Polyurethane Technology',
@@ -143,8 +143,8 @@ const ProductsCarousel: React.FC = () => {
         }
       ],
       description: 'Decorative textured coatings for unique architectural finishes and surface treatments',
-      cardImage: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      popupImage: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      cardImage: '/it1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      popupImage: '/et1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'Create stunning visual effects with our range of textured finishes. From subtle textures to bold architectural statements, our products offer unlimited creative possibilities.',
       features: [
         'Multiple Texture Patterns',
