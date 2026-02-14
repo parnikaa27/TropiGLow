@@ -21,13 +21,13 @@ const HawkyAntiCorrosivePaintPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-slate-700 via-gray-700 to-slate-800 text-white py-16">
+      <div className="bg-gradient-to-r from-cyan-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-slate-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -39,7 +39,7 @@ const HawkyAntiCorrosivePaintPage: React.FC = () => {
                 <Shield className="h-8 w-8 text-blue-300" />
                 <h1 className="text-5xl font-bold">HAWKY ANTI-CORROSIVE PAINT</h1>
               </div>
-              <p className="text-slate-200 text-xl mb-6">Marine Anti-Corrosive Protection System</p>
+              <p className="text-emerald-200 text-xl mb-6">Marine Anti-Corrosive Protection System</p>
               <p className="text-lg leading-relaxed mb-8">
                 HAWKY Anti-Corrosive Paint provides exceptional protection against corrosion in marine environments. 
                 This advanced coating system offers superior barrier protection, excellent adhesion, and long-term 
@@ -52,11 +52,11 @@ const HawkyAntiCorrosivePaintPage: React.FC = () => {
                   <span>Corrosion Protection</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Droplets className="h-5 w-5 text-slate-300" />
+                  <Droplets className="h-5 w-5 text-emerald-300" />
                   <span>Saltwater Resistant</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Star className="h-5 w-5 text-gray-300" />
+                  <Star className="h-5 w-5 text-cyan-300" />
                   <span>Marine Grade</span>
                 </div>
               </div>
@@ -68,12 +68,12 @@ const HawkyAntiCorrosivePaintPage: React.FC = () => {
                 alt="HAWKY Anti-Corrosive Paint Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-slate-500 to-gray-600 rounded-xl p-4 shadow-xl">
-              {/*  <div className="text-center">
+              {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl p-4 shadow-xl">
+               <div className="text-center">
                   <div className="text-2xl font-bold">10-14</div>
                   <div className="text-sm opacity-90">sq.m/ltr coverage</div>
-                </div> */}
-              </div>
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@ const HawkyAntiCorrosivePaintPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Anti-Corrosive Features */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Marine Anti-Corrosive Features</h2>
+          <h2 className="text-3xl font-bold text-cyan-800 mb-8 text-center">Marine Anti-Corrosive Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -116,21 +116,21 @@ const HawkyAntiCorrosivePaintPage: React.FC = () => {
                 description: "Extended protection reduces maintenance frequency and operational costs."
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-slate-500 to-gray-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-cyan-200 hover:shadow-xl transition-all duration-300">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
-                <p className="text-slate-700">{feature.description}</p>
+                <h3 className="text-lg font-bold text-cyan-800 mb-2">{feature.title}</h3>
+                <p className="text-cyan-700">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Technical Specifications */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200 mb-16">
-          <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
-            <Thermometer className="h-6 w-6 text-slate-600 mr-3" />
+        {/* Technical Specifications 
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-cyan-200 mb-16">
+          <h3 className="text-2xl font-bold text-cyan-800 mb-8 flex items-center">
+            <Thermometer className="h-6 w-6 text-cyan-600 mr-3" />
             Anti-Corrosive Technical Specifications
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -144,19 +144,19 @@ const HawkyAntiCorrosivePaintPage: React.FC = () => {
               { label: "Temperature", value: "5°C to 40°C", sublabel: "(application range)" },
               { label: "Humidity", value: "Below 85% RH", sublabel: "(recommended)" }
             ].map((spec, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-lg p-4 border border-slate-200">
-                <div className="font-semibold text-slate-800 mb-1">{spec.label}</div>
-                <div className="text-lg font-bold text-slate-600 mb-1">{spec.value}</div>
-                <div className="text-sm text-slate-600">{spec.sublabel}</div>
+              <div key={index} className="bg-gradient-to-br from-cyan-50 to-teal-50 rounded-lg p-4 border border-cyan-200">
+                <div className="font-semibold text-cyan-800 mb-1">{spec.label}</div>
+                <div className="text-lg font-bold text-cyan-600 mb-1">{spec.value}</div>
+                <div className="text-sm text-cyan-600">{spec.sublabel}</div>
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        {/* Applications & Benefits */}
+        {/* Applications & Benefits 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200">
-            <h3 className="text-xl font-bold text-slate-800 mb-6">Marine Applications</h3>
+          <div className="bg-white rounded-xl p-8 shadow-lg border border-cyan-200">
+            <h3 className="text-xl font-bold text-cyan-800 mb-6">Marine Applications</h3>
             <div className="space-y-4">
               {[
                 "Ship Hulls - Above waterline protection for all vessel types",
@@ -166,15 +166,15 @@ const HawkyAntiCorrosivePaintPage: React.FC = () => {
                 "Naval Equipment - Military vessels and marine defense systems"
               ].map((application, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-700">{application}</span>
+                  <CheckCircle className="h-5 w-5 text-cyan-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-cyan-700">{application}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200">
-            <h3 className="text-xl font-bold text-slate-800 mb-6">Marine Protection Benefits</h3>
+          <div className="bg-white rounded-xl p-8 shadow-lg border border-cyan-200">
+            <h3 className="text-xl font-bold text-cyan-800 mb-6">Marine Protection Benefits</h3>
             <div className="space-y-4">
               {[
                 "Maximum Corrosion Protection - Superior defense against marine corrosion",
@@ -185,31 +185,31 @@ const HawkyAntiCorrosivePaintPage: React.FC = () => {
                 "Professional Marine Grade - Approved for commercial marine use"
               ].map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-700">{benefit}</span>
+                  <CheckCircle className="h-5 w-5 text-cyan-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-cyan-700">{benefit}</span>
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200 text-center">
-          <h3 className="text-2xl font-bold text-slate-800 mb-4">Professional Marine Anti-Corrosive Solutions</h3>
-          <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
+          <h3 className="text-2xl font-bold text-cyan-800 mb-4">Professional Marine Anti-Corrosive Solutions</h3>
+          <p className="text-cyan-700 mb-6 text-lg max-w-2xl mx-auto">
             Protect your marine assets with HAWKY Anti-Corrosive Paint. Get expert consultation on application 
             techniques, surface preparation, and marine coating system design for maximum protection.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToContact}
-              className="bg-gradient-to-r from-slate-600 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-slate-700 hover:to-gray-700 transition-all duration-200 shadow-lg"
+              className="bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-teal-700 transition-all duration-200 shadow-lg"
             >
               Get Marine Protection Consultation
             </button>
             <button
               onClick={scrollToContact}
-              className="border-2 border-slate-600 text-slate-600 hover:bg-slate-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
+              className="border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
               Request Anti-Corrosive Sample
             </button>

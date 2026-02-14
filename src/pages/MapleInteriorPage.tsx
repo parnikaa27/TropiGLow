@@ -44,7 +44,7 @@ const MapleInteriorPage: React.FC = () => {
               
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Star className="h-5 w-5 text-yellow-300" />
+                  <Star className="h-5 w-5 text-cyan-300" />
                   <span>Premium Quality</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
@@ -60,7 +60,7 @@ const MapleInteriorPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/mi1.jpeg"
                 alt="MAPLE INTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
@@ -297,6 +297,7 @@ const MapleInteriorPage: React.FC = () => {
           
        {/* Downloadable Data Sheet link */}
 <div className="mt-6">
+{/* Place the PDF file in your public/assets folder at: /public/assets/Allura-AntiFungal-DataSheet.pdf */}
 <a
 href="/anti_fungal.pdf"
 download="Data Sheet.pdf"

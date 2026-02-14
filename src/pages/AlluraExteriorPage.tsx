@@ -21,13 +21,13 @@ const AlluraExteriorPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-sky-50 to-cyan-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-800 via-sky-800 to-cyan-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-blue-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -39,7 +39,7 @@ const AlluraExteriorPage: React.FC = () => {
                 <Sun className="h-8 w-8 text-yellow-300" />
                 <h1 className="text-5xl font-bold">ALLURA EXTERIOR</h1>
               </div>
-              <p className="text-blue-200 text-xl mb-6">Weather-Resistant Exterior Protection</p>
+              <p className="text-emerald-200 text-xl mb-6">Weather-Resistant Exterior Protection</p>
               <p className="text-lg leading-relaxed mb-8">
                 ALLURA EXTERIOR is a high-performance exterior emulsion paint designed to withstand extreme weather conditions. 
                 Formulated with advanced weather-resistant polymers and UV stabilizers, it provides long-lasting protection 
@@ -56,7 +56,7 @@ const AlluraExteriorPage: React.FC = () => {
                   <span>UV Protection</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Star className="h-5 w-5 text-cyan-300" />
+                  <Star className="h-5 w-5 text-emerald-300" />
                   <span>Fade Resistant</span>
                 </div>
               </div>
@@ -64,13 +64,13 @@ const AlluraExteriorPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/ae2.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                 alt="ALLURA EXTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl p-4 shadow-xl">
+              {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl p-4 shadow-xl">
                 
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -113,8 +113,8 @@ const AlluraExteriorPage: React.FC = () => {
                 description: "Superior bonding to various substrates ensures long-lasting performance."
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-emerald-200 hover:shadow-xl transition-all duration-300">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
@@ -275,7 +275,7 @@ const AlluraExteriorPage: React.FC = () => {
         </div> */}
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-200 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Protect Your Exterior with ALLURA</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
             Shield your building from harsh weather conditions with ALLURA EXTERIOR. Get professional consultation 
@@ -284,13 +284,13 @@ const AlluraExteriorPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToContact}
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
+              className="bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
             >
               Get Weather Protection Consultation
             </button>
             <button
               onClick={scrollToContact}
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
+              className="border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
               Request Exterior Sample
             </button>

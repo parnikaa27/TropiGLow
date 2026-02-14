@@ -16,11 +16,11 @@ const BondxPuTopcoatPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-yellow-100">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-yellow-700 via-orange-700 to-yellow-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <button onClick={() => navigate('/')} className="flex items-center space-x-2 mb-6 hover:text-yellow-200">
+          <button onClick={() => navigate('/')} className="flex items-center space-x-2 mb-6 hover:text-emerald-200">
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
           </button>
@@ -28,17 +28,17 @@ const BondxPuTopcoatPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <Paintbrush className="h-8 w-8 text-yellow-300" />
+                <Paintbrush className="h-8 w-8 text-teal-300" />
                 <h1 className="text-4xl font-bold">BONDX PU Topcoat</h1>
               </div>
-              <p className="text-lg text-yellow-200 mb-6">
+              <p className="text-lg text-emerald-200 mb-6">
                 A premium polyurethane topcoat offering superior gloss, weather resistance, and long-lasting color retention.
               </p>
 
               <div className="flex flex-wrap gap-4">
                 {[Shield, Sun, Droplets, Star].map((Icon, idx) => (
                   <div key={idx} className="flex items-center space-x-2 bg-white bg-opacity-10 rounded-lg px-4 py-2">
-                    <Icon className="h-5 w-5 text-yellow-300" />
+                    <Icon className="h-5 w-5 text-teal-300" />
                     <span>
                       {idx === 0 && 'High Durability'}
                       {idx === 1 && 'UV Resistant'}
@@ -56,7 +56,7 @@ const BondxPuTopcoatPage: React.FC = () => {
                 alt="BONDX PU Topcoat"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-yellow-500 rounded-xl p-4 shadow-xl">
+              <div className="absolute -bottom-6 -right-6 bg-teal-500 rounded-xl p-4 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold">Gloss Finish</div>
                   <div className="text-sm opacity-90">Premium Polyurethane</div>
@@ -101,7 +101,7 @@ const BondxPuTopcoatPage: React.FC = () => {
               }
             ].map((feature, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-lg border">
-                <feature.icon className="h-6 w-6 text-yellow-500 mb-3" />
+                <feature.icon className="h-6 w-6 text-teal-500 mb-3" />
                 <h3 className="font-semibold text-slate-800 mb-2">{feature.title}</h3>
                 <p className="text-slate-600">{feature.desc}</p>
               </div>
@@ -158,14 +158,14 @@ const BondxPuTopcoatPage: React.FC = () => {
         </section> */}
 
         {/* CTA */}
-        <section className="bg-yellow-500 text-white rounded-xl p-8 text-center">
+        <section className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold mb-4">Need a Durable & Glossy Finish?</h3>
           <p className="mb-6">
             BONDX PU Topcoat is your go-to solution for aesthetic appeal and long-lasting protection. Let’s get in touch!
           </p>
           <button
             onClick={scrollToContact}
-            className="bg-white text-yellow-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition"
+            className="bg-white text-emerald-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition"
           >
             Request Consultation
           </button>

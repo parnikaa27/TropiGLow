@@ -362,6 +362,31 @@ const ProductsCarousel: React.FC = () => {
     }
   ];
 
+  useEffect(() => {
+  const handleProductNavigation = (event: CustomEvent) => {
+    const product = products.find(
+      (p) => p.id === event.detail.productId
+    );
+
+    if (product) {
+      setSelectedProduct(product);
+    }
+  };
+
+  window.addEventListener(
+    'navigateToProduct',
+    handleProductNavigation as EventListener
+  );
+
+  return () => {
+    window.removeEventListener(
+      'navigateToProduct',
+      handleProductNavigation as EventListener
+    );
+  };
+}, [products]);
+
+
   // Auto-advance carousel
   useEffect(() => {
     const timer = setInterval(() => {

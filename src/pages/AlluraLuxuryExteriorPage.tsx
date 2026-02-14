@@ -21,13 +21,13 @@ const AlluraLuxuryExteriorPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-indigo-800 via-purple-800 to-pink-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-indigo-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -39,7 +39,7 @@ const AlluraLuxuryExteriorPage: React.FC = () => {
                 <Crown className="h-8 w-8 text-yellow-300" />
                 <h1 className="text-5xl font-bold">ALLURA LUXURY EXTERIOR</h1>
               </div>
-              <p className="text-indigo-200 text-xl mb-6">Premium Exterior Paint with Advanced Weather Protection</p>
+              <p className="text-emerald-200 text-xl mb-6">Premium Exterior Paint with Advanced Weather Protection</p>
               <p className="text-lg leading-relaxed mb-8">
                 ALLURA LUXURY EXTERIOR represents the pinnacle of exterior paint technology. With enhanced weather resistance, 
                 superior color retention, and advanced protective properties, it delivers exceptional performance and luxury 
@@ -56,7 +56,7 @@ const AlluraLuxuryExteriorPage: React.FC = () => {
                   <span>Advanced UV Resistance</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Star className="h-5 w-5 text-purple-300" />
+                  <Star className="h-5 w-5 text-emerald-300" />
                   <span>Luxury Finish Quality</span>
                 </div>
               </div>
@@ -64,7 +64,7 @@ const AlluraLuxuryExteriorPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="ae3.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                 alt="ALLURA LUXURY EXTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
@@ -113,8 +113,8 @@ const AlluraLuxuryExteriorPage: React.FC = () => {
                 description: "Premium formulation delivers an exceptional finish that enhances architectural beauty."
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-indigo-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-emerald-200 hover:shadow-xl transition-all duration-300">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
@@ -275,7 +275,7 @@ const AlluraLuxuryExteriorPage: React.FC = () => {
         </div> */}
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-indigo-200 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Experience Luxury Exterior Protection</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
             Transform your exterior with ALLURA LUXURY EXTERIOR. Get premium consultation on surface preparation, 

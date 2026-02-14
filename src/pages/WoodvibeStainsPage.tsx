@@ -21,13 +21,13 @@ const WoodvibeStainsPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-amber-800 via-orange-800 to-yellow-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-amber-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -36,10 +36,10 @@ const WoodvibeStainsPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <Palette className="h-8 w-8 text-amber-300" />
+                <Palette className="h-8 w-8 text-emerald-300" />
                 <h1 className="text-5xl font-bold">WOODVIBE 2K PU WOOD STAINS</h1>
               </div>
-              <p className="text-amber-200 text-xl mb-6">Professional 2-Component Polyurethane Wood Stains</p>
+              <p className="text-emerald-200 text-xl mb-6">Professional 2-Component Polyurethane Wood Stains</p>
               <p className="text-lg leading-relaxed mb-8">
                 WOODVIBE 2K PU Wood Stains represent the ultimate in wood finishing technology. These two-component 
                 polyurethane stains penetrate deep into wood fibers while providing a protective surface coating. 
@@ -49,15 +49,15 @@ const WoodvibeStainsPage: React.FC = () => {
               
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Zap className="h-5 w-5 text-amber-300" />
+                  <Zap className="h-5 w-5 text-cyan-300" />
                   <span>2K PU Technology</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Shield className="h-5 w-5 text-orange-300" />
+                  <Shield className="h-5 w-5 text-blue-300" />
                   <span>Superior Durability</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Eye className="h-5 w-5 text-yellow-300" />
+                  <Eye className="h-5 w-5 text-emerald-300" />
                   <span>Wood Enhancement</span>
                 </div>
               </div>
@@ -65,16 +65,16 @@ const WoodvibeStainsPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/ws1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                 alt="WOODVIBE 2K PU Wood Stains Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-orange-600 rounded-xl p-4 shadow-xl">
+              {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-orange-600 rounded-xl p-4 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold">150-200</div>
                   <div className="text-sm opacity-90">sq.ft/ltr coverage</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -118,7 +118,7 @@ const WoodvibeStainsPage: React.FC = () => {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-amber-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-amber-500 to-orange-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
@@ -128,7 +128,7 @@ const WoodvibeStainsPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Technical Specifications */}
+        {/* Technical Specifications 
         <div className="bg-white rounded-xl p-8 shadow-lg border border-amber-200 mb-16">
           <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
             <Thermometer className="h-6 w-6 text-amber-600 mr-3" />
@@ -152,7 +152,7 @@ const WoodvibeStainsPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Applications & Benefits */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
@@ -186,7 +186,7 @@ const WoodvibeStainsPage: React.FC = () => {
                 "Versatile Application - Suitable for various wood types and projects"
               ].map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-700">{benefit}</span>
                 </div>
               ))}
@@ -194,7 +194,7 @@ const WoodvibeStainsPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Application Instructions */}
+        {/* Application Instructions 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-amber-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Professional Surface Preparation</h3>
@@ -234,9 +234,9 @@ const WoodvibeStainsPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* Available Options */}
+        {/* Available Options 
         <div className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-xl p-8 text-white mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div>
@@ -275,10 +275,10 @@ const WoodvibeStainsPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-amber-200 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Professional Wood Finishing Solutions</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
             Transform your wood projects with WOODVIBE 2K PU Wood Stains. Get expert consultation on application 
@@ -287,13 +287,13 @@ const WoodvibeStainsPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToContact}
-              className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-700 hover:to-orange-700 transition-all duration-200 shadow-lg"
+              className="bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-700 hover:to-orange-700 transition-all duration-200 shadow-lg"
             >
               Get Professional Consultation
             </button>
             <button
               onClick={scrollToContact}
-              className="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
+              className="border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
               Request Wood Stain Sample
             </button>

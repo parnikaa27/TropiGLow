@@ -21,13 +21,13 @@ const WbondHrClear250Page: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-slate-700 via-gray-700 to-slate-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-slate-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -39,7 +39,7 @@ const WbondHrClear250Page: React.FC = () => {
                 <Eye className="h-8 w-8 text-blue-300" />
                 <h1 className="text-5xl font-bold">WBOND HR CLEAR 250°C</h1>
               </div>
-              <p className="text-slate-200 text-xl mb-6">High-Temperature Clear Protective Coating</p>
+              <p className="text-emerald-200 text-xl mb-6">High-Temperature Clear Protective Coating</p>
               <p className="text-lg leading-relaxed mb-8">
                 WBOND HR CLEAR 250°C is a specialized clear coating designed for high-temperature applications up to 
                 250°C. This transparent protective coating maintains clarity while providing excellent thermal protection, 
@@ -52,11 +52,11 @@ const WbondHrClear250Page: React.FC = () => {
                   <span>Crystal Clear</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Thermometer className="h-5 w-5 text-orange-300" />
+                  <Thermometer className="h-5 w-5 text-emerald-300" />
                   <span>250°C Service</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Shield className="h-5 w-5 text-slate-300" />
+                  <Shield className="h-5 w-5 text-cyan-300" />
                   <span>Thermal Protection</span>
                 </div>
               </div>
@@ -117,7 +117,7 @@ const WbondHrClear250Page: React.FC = () => {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
@@ -127,7 +127,7 @@ const WbondHrClear250Page: React.FC = () => {
           </div>
         </div>
 
-        {/* Technical Specifications */}
+        {/* Technical Specifications 
         <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200 mb-16">
           <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
             <Thermometer className="h-6 w-6 text-blue-600 mr-3" />
@@ -151,7 +151,7 @@ const WbondHrClear250Page: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Applications & Benefits */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
@@ -194,7 +194,7 @@ const WbondHrClear250Page: React.FC = () => {
         </div>
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Clear High-Temperature Protection Solutions</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
             Achieve transparent thermal protection with WBOND HR CLEAR 250°C. Get expert consultation on 

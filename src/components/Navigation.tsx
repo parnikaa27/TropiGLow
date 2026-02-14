@@ -192,6 +192,16 @@ const Navigation: React.FC = () => {
     setActiveSubDropdown(null);
   };
 
+  const handleCategoryClick = (categoryId: string) => {
+    window.dispatchEvent(
+      new CustomEvent('navigateToProduct', {
+        detail: { productId: categoryId }
+      })
+    );
+    setActiveDropdown(null);
+    setActiveSubDropdown(null);
+  };
+
   const scrollToSection = (sectionId: string) => {
   if (location.pathname !== '/') {
     navigate(`/?scrollTo=${sectionId}`);
@@ -241,7 +251,7 @@ const Navigation: React.FC = () => {
               >
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className="flex items-center space-x-1 text-slate-600 hover:text-blue-600 font-semibold text-md"
+                  className="flex items-center space-x-1 text-slate-600 hover:text-blue-600 font-semibold text-"
                 >
                   <span>{item.name}</span>
                   {item.name === 'PRODUCTS' && <ChevronDown className="h-4 w-4" />}
@@ -252,9 +262,14 @@ const Navigation: React.FC = () => {
                     {productCategories.map((category, index) => (
                       <div key={index} className="group relative">
                         <div
-                          className="px-5 py-3 text-slate-700 hover:bg-blue-50 cursor-pointer flex items-center justify-between"
-                          onMouseEnter={() => handleSubMouseEnter(category.id)}
-                        >
+  className="px-5 py-3 text-slate-700 hover:bg-blue-50 cursor-pointer flex items-center justify-between"
+  onMouseEnter={() => handleSubMouseEnter(category.id)}
+  onClick={() => {
+    scrollToSection('products');  // ensures we are in products section
+    handleCategoryClick(category.id); // opens correct popup
+  }}
+>
+
                           <span className="font-semibold">{category.name}</span>
                           <ChevronDown className="h-4 w-4 rotate-[-90deg]" />
                         </div>

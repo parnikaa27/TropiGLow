@@ -21,13 +21,13 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-50 to-zinc-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-gray-800 via-slate-800 to-zinc-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-gray-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -39,7 +39,7 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
                 <Palette className="h-8 w-8 text-gray-300" />
                 <h1 className="text-5xl font-bold">SLIKO ACRYLIC INT/EXT PUTTY</h1>
               </div>
-              <p className="text-gray-200 text-xl mb-6">Premium Acrylic Wall Putty for Interior & Exterior</p>
+              <p className="text-emerald-200 text-xl mb-6">Premium Acrylic Wall Putty for Interior & Exterior</p>
               <p className="text-lg leading-relaxed mb-8">
                 SLIKO Acrylic Putty is a high-performance wall putty suitable for both interior and exterior applications. 
                 Formulated with premium acrylic polymers, it provides excellent adhesion, smooth finish, and superior 
@@ -48,15 +48,15 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
               
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Star className="h-5 w-5 text-gray-300" />
+                  <Star className="h-5 w-5 text-emerald-300" />
                   <span>Interior & Exterior</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Shield className="h-5 w-5 text-slate-300" />
+                  <Shield className="h-5 w-5 text-cyan-300" />
                   <span>Superior Adhesion</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Eye className="h-5 w-5 text-zinc-300" />
+                  <Eye className="h-5 w-5 text-blue-300" />
                   <span>Smooth Finish</span>
                 </div>
               </div>
@@ -117,7 +117,7 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-gray-500 to-slate-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
@@ -127,7 +127,7 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Technical Specifications */}
+        {/* Technical Specifications 
         <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 mb-16">
           <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
             <Thermometer className="h-6 w-6 text-gray-600 mr-3" />
@@ -151,7 +151,7 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Applications & Benefits */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
@@ -193,7 +193,7 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Application Instructions */}
+        {/* Application Instructions 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Surface Preparation</h3>
@@ -233,9 +233,9 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* Available Options */}
+        {/* Available Options 
         <div className="bg-gradient-to-r from-gray-600 to-slate-600 rounded-xl p-8 text-white mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div>
@@ -275,10 +275,10 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Perfect Surface Preparation Solutions</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
             Achieve professional surface preparation with SLIKO Acrylic Putty. Get expert advice on application 

@@ -21,13 +21,13 @@ const SlikoCrackfillPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-amber-800 via-orange-800 to-red-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-amber-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -39,7 +39,7 @@ const SlikoCrackfillPage: React.FC = () => {
                 <Zap className="h-8 w-8 text-amber-300" />
                 <h1 className="text-5xl font-bold">SLIKO CRACKFILL</h1>
               </div>
-              <p className="text-amber-200 text-xl mb-6">Professional Crack Repair & Filling System</p>
+              <p className="text-emerald-200 text-xl mb-6">Professional Crack Repair & Filling System</p>
               <p className="text-lg leading-relaxed mb-8">
                 SLIKO CRACKFILL is a specialized crack repair compound designed to fill and seal cracks in walls, 
                 ceilings, and other surfaces. Its flexible formulation prevents crack reappearance while providing 
@@ -48,15 +48,15 @@ const SlikoCrackfillPage: React.FC = () => {
               
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Zap className="h-5 w-5 text-amber-300" />
+                  <Zap className="h-5 w-5 text-emerald-300" />
                   <span>Crack Repair</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Shield className="h-5 w-5 text-orange-300" />
+                  <Shield className="h-5 w-5 text-blue-300" />
                   <span>Flexible Formula</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Star className="h-5 w-5 text-red-300" />
+                  <Star className="h-5 w-5 text-cyan-300" />
                   <span>Professional Grade</span>
                 </div>
               </div>
@@ -117,7 +117,7 @@ const SlikoCrackfillPage: React.FC = () => {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-amber-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-amber-500 to-orange-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
@@ -127,7 +127,7 @@ const SlikoCrackfillPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Technical Specifications */}
+        {/* Technical Specifications 
         <div className="bg-white rounded-xl p-8 shadow-lg border border-amber-200 mb-16">
           <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
             <Thermometer className="h-6 w-6 text-amber-600 mr-3" />
@@ -151,7 +151,7 @@ const SlikoCrackfillPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Applications & Benefits */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
@@ -193,7 +193,7 @@ const SlikoCrackfillPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Application Instructions */}
+        {/* Application Instructions 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-amber-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Crack Preparation</h3>
@@ -233,9 +233,9 @@ const SlikoCrackfillPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* Available Options */}
+        {/* Available Options 
         <div className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-xl p-8 text-white mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div>
@@ -274,10 +274,10 @@ const SlikoCrackfillPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-amber-200 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Professional Crack Repair Solutions</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
             Achieve permanent crack repair with SLIKO CRACKFILL. Get expert advice on crack assessment, 

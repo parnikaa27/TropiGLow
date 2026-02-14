@@ -21,13 +21,13 @@ const MapleLuxuryInteriorPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-purple-800 via-indigo-800 to-blue-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-purple-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -36,10 +36,10 @@ const MapleLuxuryInteriorPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <Crown className="h-8 w-8 text-yellow-300" />
+                <Crown className="h-8 w-8 text-emerald-300" />
                 <h1 className="text-5xl font-bold">MAPLE LUXURY INTERIOR</h1>
               </div>
-              <p className="text-purple-200 text-xl mb-6">Ultra-Premium Interior Emulsion Paint</p>
+              <p className="text-emerald-200 text-xl mb-6">Ultra-Premium Interior Emulsion Paint</p>
               <p className="text-lg leading-relaxed mb-8">
                 Experience the pinnacle of interior paint technology with MAPLE LUXURY INTERIOR. 
                 Formulated with premium acrylic resins and advanced additives for exceptional performance, 
@@ -48,11 +48,11 @@ const MapleLuxuryInteriorPage: React.FC = () => {
               
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Crown className="h-5 w-5 text-yellow-300" />
+                  <Crown className="h-5 w-5 text-emerald-300" />
                   <span>Ultra-Premium Quality</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Shield className="h-5 w-5 text-purple-300" />
+                  <Shield className="h-5 w-5 text-cyan-300" />
                   <span>Advanced Stain Resistance</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
@@ -64,16 +64,16 @@ const MapleLuxuryInteriorPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/mi2.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                 alt="MAPLE LUXURY INTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl p-4 shadow-xl">
+              {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl p-4 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold">130-150</div>
                   <div className="text-sm opacity-90">sq.ft/ltr coverage</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ const MapleLuxuryInteriorPage: React.FC = () => {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-purple-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-purple-500 to-indigo-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
@@ -127,7 +127,7 @@ const MapleLuxuryInteriorPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Technical Specifications */}
+        {/* Technical Specifications 
         <div className="bg-white rounded-xl p-8 shadow-lg border border-purple-200 mb-16">
           <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
             <Thermometer className="h-6 w-6 text-purple-600 mr-3" />
@@ -151,7 +151,7 @@ const MapleLuxuryInteriorPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Premium Applications */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
@@ -166,7 +166,7 @@ const MapleLuxuryInteriorPage: React.FC = () => {
                 "Office Buildings - Executive and corporate spaces"
               ].map((application, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-700">{application}</span>
                 </div>
               ))}
@@ -185,7 +185,7 @@ const MapleLuxuryInteriorPage: React.FC = () => {
                 "Long-Term Value - Investment in lasting quality"
               ].map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-700">{benefit}</span>
                 </div>
               ))}
@@ -193,7 +193,7 @@ const MapleLuxuryInteriorPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Professional Application */}
+        {/* Professional Application
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-purple-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Premium Surface Preparation</h3>
@@ -233,9 +233,9 @@ const MapleLuxuryInteriorPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div>  */}
 
-        {/* Premium Options */}
+        {/* Premium Options 
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-8 text-white mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div>
@@ -275,10 +275,10 @@ const MapleLuxuryInteriorPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-purple-200 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Experience Luxury Interior Painting</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
             Elevate your space with MAPLE LUXURY INTERIOR. Get professional consultation on premium color selection, 
@@ -287,13 +287,13 @@ const MapleLuxuryInteriorPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToContact}
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 shadow-lg"
+              className="bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 shadow-lg"
             >
               Get Premium Consultation
             </button>
             <button
               onClick={scrollToContact}
-              className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
+              className="border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
               Request Luxury Sample
             </button>

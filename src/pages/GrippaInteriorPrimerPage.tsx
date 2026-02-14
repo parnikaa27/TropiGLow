@@ -21,13 +21,13 @@ const GrippaInteriorPrimerPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-blue-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -39,7 +39,7 @@ const GrippaInteriorPrimerPage: React.FC = () => {
                 <Layers className="h-8 w-8 text-blue-300" />
                 <h1 className="text-5xl font-bold">GRIPPA INTERIOR PRIMER</h1>
               </div>
-              <p className="text-blue-200 text-xl mb-6">High-Performance Interior Wall Primer</p>
+              <p className="text-emerald-200 text-xl mb-6">High-Performance Interior Wall Primer</p>
               <p className="text-lg leading-relaxed mb-8">
                 GRIPPA Interior Primer provides exceptional adhesion and surface preparation for interior walls. 
                 Formulated to seal porous surfaces, enhance paint adhesion, and ensure uniform topcoat appearance, 
@@ -52,11 +52,11 @@ const GrippaInteriorPrimerPage: React.FC = () => {
                   <span>Superior Adhesion</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Droplets className="h-5 w-5 text-indigo-300" />
+                  <Droplets className="h-5 w-5 text-emerald-300" />
                   <span>Sealing Properties</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Star className="h-5 w-5 text-purple-300" />
+                  <Star className="h-5 w-5 text-cyan-300" />
                   <span>Uniform Coverage</span>
                 </div>
               </div>
@@ -68,12 +68,12 @@ const GrippaInteriorPrimerPage: React.FC = () => {
                 alt="GRIPPA Interior Primer Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-4 shadow-xl">
+              {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-4 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold">100-120</div>
                   <div className="text-sm opacity-90">sq.ft/ltr coverage</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ const GrippaInteriorPrimerPage: React.FC = () => {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-blue-500 to-indigo-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
@@ -127,7 +127,7 @@ const GrippaInteriorPrimerPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Technical Specifications */}
+        {/* Technical Specifications 
         <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-200 mb-16">
           <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
             <Thermometer className="h-6 w-6 text-blue-600 mr-3" />
@@ -151,9 +151,9 @@ const GrippaInteriorPrimerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        {/* Applications & Benefits */}
+        {/* Applications & Benefits 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Interior Applications</h3>
@@ -191,9 +191,9 @@ const GrippaInteriorPrimerPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* Application Instructions */}
+        {/* Application Instructions 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Surface Preparation</h3>
@@ -233,9 +233,9 @@ const GrippaInteriorPrimerPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* Available Options */}
+        {/* Available Options 
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 text-white mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div>
@@ -274,10 +274,10 @@ const GrippaInteriorPrimerPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-200 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Perfect Interior Surface Preparation</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
             Ensure professional results with GRIPPA Interior Primer. Get expert advice on surface preparation, 
@@ -286,13 +286,13 @@ const GrippaInteriorPrimerPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToContact}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-lg"
+              className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-teal-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
             >
               Get Primer Consultation
             </button>
             <button
               onClick={scrollToContact}
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
+              className="border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
               Request Primer Sample
             </button>

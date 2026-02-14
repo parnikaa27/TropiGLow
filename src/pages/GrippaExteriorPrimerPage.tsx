@@ -21,13 +21,13 @@ const GrippaExteriorPrimerPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-green-800 via-emerald-800 to-teal-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-green-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -39,7 +39,7 @@ const GrippaExteriorPrimerPage: React.FC = () => {
                 <Layers className="h-8 w-8 text-green-300" />
                 <h1 className="text-5xl font-bold">GRIPPA EXTERIOR PRIMER</h1>
               </div>
-              <p className="text-green-200 text-xl mb-6">Weather-Resistant Exterior Wall Primer</p>
+              <p className="text-emerald-200 text-xl mb-6">Weather-Resistant Exterior Wall Primer</p>
               <p className="text-lg leading-relaxed mb-8">
                 GRIPPA Exterior Primer provides superior adhesion and weather protection for exterior surfaces. 
                 Formulated to withstand harsh weather conditions while ensuring optimal topcoat performance, 
@@ -48,7 +48,7 @@ const GrippaExteriorPrimerPage: React.FC = () => {
               
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Shield className="h-5 w-5 text-green-300" />
+                  <Shield className="h-5 w-5 text-blue-300" />
                   <span>Weather Resistant</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
@@ -56,7 +56,7 @@ const GrippaExteriorPrimerPage: React.FC = () => {
                   <span>Moisture Protection</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <Star className="h-5 w-5 text-teal-300" />
+                  <Star className="h-5 w-5 text-cyan-300" />
                   <span>Superior Adhesion</span>
                 </div>
               </div>
@@ -68,12 +68,12 @@ const GrippaExteriorPrimerPage: React.FC = () => {
                 alt="GRIPPA Exterior Primer Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-4 shadow-xl">
+              {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-4 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold">90-110</div>
                   <div className="text-sm opacity-90">sq.ft/ltr coverage</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ const GrippaExteriorPrimerPage: React.FC = () => {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-green-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-green-500 to-emerald-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
@@ -127,7 +127,7 @@ const GrippaExteriorPrimerPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Technical Specifications */}
+        {/* Technical Specifications 
         <div className="bg-white rounded-xl p-8 shadow-lg border border-green-200 mb-16">
           <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
             <Thermometer className="h-6 w-6 text-green-600 mr-3" />
@@ -151,9 +151,9 @@ const GrippaExteriorPrimerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        {/* Applications & Benefits */}
+        {/* Applications & Benefits 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-green-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Exterior Applications</h3>
@@ -191,10 +191,10 @@ const GrippaExteriorPrimerPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-green-200 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Professional Exterior Surface Preparation</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
             Ensure maximum weather protection with GRIPPA Exterior Primer. Get expert advice on surface preparation, 
@@ -203,13 +203,13 @@ const GrippaExteriorPrimerPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToContact}
-              className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200 shadow-lg"
+              className="bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-teal-700 transition-all duration-200 shadow-lg"
             >
               Get Weather Protection Consultation
             </button>
             <button
               onClick={scrollToContact}
-              className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
+              className="border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
               Request Exterior Primer Sample
             </button>

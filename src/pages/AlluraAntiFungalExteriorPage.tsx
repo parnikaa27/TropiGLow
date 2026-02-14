@@ -23,11 +23,11 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-50 via-green-50 to-emerald-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-teal-800 via-green-800 to-emerald-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-teal-200 hover:text-white mb-6 transition-colors duration-200"
+            className="flex items-center space-x-2 text-emerald-200 hover:text-white mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
@@ -39,7 +39,7 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
                 <Shield className="h-8 w-8 text-green-300" />
                 <h1 className="text-5xl font-bold">ALLURA ANTI FUNGAL EXTERIOR</h1>
               </div>
-              <p className="text-teal-200 text-xl mb-6">Advanced Anti-Fungal Exterior Protection</p>
+              <p className="text-emerald-200 text-xl mb-6">Advanced Anti-Fungal Exterior Protection</p>
               <p className="text-lg leading-relaxed mb-8">
                 ALLURA ANTI FUNGAL EXTERIOR combines superior weather resistance with advanced anti-fungal protection. 
                 Specially formulated for humid climates and coastal environments, it prevents mold, mildew, and algae growth 
@@ -64,7 +64,7 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/ae1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                 alt="ALLURA ANTI FUNGAL EXTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
@@ -116,8 +116,8 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
                 description: "Surface technology helps wash away dirt and organic matter naturally."
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-teal-200 hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-teal-500 to-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-emerald-200 hover:shadow-xl transition-all duration-300">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
@@ -278,7 +278,7 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
         </div> */}
 
         {/* Contact CTA */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-teal-200 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Protect Your Exterior from Fungal Growth</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
             Shield your building from mold, mildew, and algae with ALLURA ANTI FUNGAL EXTERIOR. Get expert consultation 

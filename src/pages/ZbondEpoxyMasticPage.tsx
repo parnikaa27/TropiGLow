@@ -15,27 +15,27 @@ const ZbondEpoxyMasticPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-100 to-slate-200">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-slate-700 via-gray-800 to-slate-900 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-800 via-emerald-800 to-teal-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <button onClick={() => navigate('/')} className="flex items-center space-x-2 mb-6 hover:text-slate-300">
+          <button onClick={() => navigate('/')} className="flex items-center space-x-2 mb-6 hover:text-emerald-300">
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
           </button>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <Layers className="h-8 w-8 text-indigo-300" />
+                <Layers className="h-8 w-8 text-emerald-300" />
                 <h1 className="text-4xl font-bold">ZBOND Epoxy Mastic Coatings</h1>
               </div>
-              <p className="text-lg text-gray-200 mb-6">
+              <p className="text-lg text-emerald-200 mb-6">
                 A versatile high-solids mastic coating offering excellent adhesion to aged surfaces, rusted steel, and old coatings.
               </p>
               <div className="flex flex-wrap gap-4">
                 {[Shield, Droplets, Star, Layers].map((Icon, idx) => (
                   <div key={idx} className="flex items-center space-x-2 bg-white bg-opacity-10 rounded-lg px-4 py-2">
-                    <Icon className="h-5 w-5 text-indigo-200" />
+                    <Icon className="h-5 w-5 text-emerald-200" />
                     <span>
                       {idx === 0 && 'Rust Tolerant'}
                       {idx === 1 && 'Surface Moisture Tolerant'}
@@ -52,12 +52,12 @@ const ZbondEpoxyMasticPage: React.FC = () => {
                 alt="ZBOND Mastic Coating"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-indigo-600 rounded-xl p-4 shadow-xl">
+              {/* <div className="absolute -bottom-6 -right-6 bg-cyan-600 rounded-xl p-4 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold">1000+ hrs</div>
                   <div className="text-sm opacity-90">Salt Spray Resistance</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@ const ZbondEpoxyMasticPage: React.FC = () => {
               }
             ].map((feat, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-lg border">
-                <feat.icon className="h-6 w-6 text-indigo-600 mb-3" />
+                <feat.icon className="h-6 w-6 text-teal-600 mb-3" />
                 <h3 className="font-semibold text-slate-800 mb-2">{feat.title}</h3>
                 <p className="text-slate-600">{feat.desc}</p>
               </div>
@@ -100,7 +100,7 @@ const ZbondEpoxyMasticPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Technical Specs */}
+        {/* Technical Specs 
         <section className="bg-white rounded-xl p-8 shadow-lg border">
           <h3 className="text-2xl font-bold text-slate-800 mb-6">Technical Specifications</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -110,13 +110,13 @@ const ZbondEpoxyMasticPage: React.FC = () => {
               { label: 'Service Temp.', value: '−20 °C to 120 °C' },
               { label: 'Adhesion Strength', value: 'Excellent on corroded surfaces' }
             ].map((spec, i) => (
-              <div key={i} className="p-4 bg-gray-50 rounded-lg">
+              <div key={i} className="p-4 bg-teal-50 rounded-lg">
                 <div className="font-semibold text-slate-800">{spec.label}</div>
-                <div className="text-xl font-bold text-indigo-600">{spec.value}</div>
+                <div className="text-xl font-bold text-cyan-600">{spec.value}</div>
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* Applications & Benefits */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -149,14 +149,14 @@ const ZbondEpoxyMasticPage: React.FC = () => {
         </section>
 
         {/* CTA */}
-        <section className="bg-indigo-600 text-white rounded-xl p-8 text-center">
+        <section className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold mb-4">Looking for Surface-Tolerant Protection?</h3>
           <p className="mb-6">
             Get in touch to discuss if ZBOND Mastic is the right fit for your industrial or marine coating needs.
           </p>
           <button
             onClick={scrollToContact}
-            className="bg-white text-indigo-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition"
+            className="bg-white text-cyan-600 px-8 py-3 rounded-md font-semibold hover:bg-teal-100 transition"
           >
             Contact Us
           </button>
