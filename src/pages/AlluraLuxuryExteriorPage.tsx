@@ -64,13 +64,10 @@ const EvercoatLuxuryExteriorPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="ae3.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/ae3.jpeg"
                 alt="EVERCOAT LUXURY EXTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-4 shadow-xl">
-                
-              </div>
             </div>
           </div>
         </div>

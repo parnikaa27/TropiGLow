@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Continuously rotating product carousel.
+   The track holds two identical copies of the product list, so shifting it by
+   exactly half its width lands on the start of the second copy — seamless loop. */
+@keyframes tg-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tg-marquee-track {
+  animation: tg-marquee 90s linear infinite;
+  will-change: transform;
+}
+
+/* Pause while the user is hovering anywhere over the carousel */
+.tg-marquee:hover .tg-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tg-marquee-track {
+    animation: none;
+  }
+}

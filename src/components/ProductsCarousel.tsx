@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X } from 'lucide-react';
 
 interface Product {
   id: string;
@@ -23,8 +23,6 @@ interface ProductCategory {
 
 const ProductsCarousel: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const navigate = useNavigate();
 
   const products: Product[] = [
@@ -398,15 +396,6 @@ const ProductsCarousel: React.FC = () => {
 }, [products]);
 
 
-  // Auto-advance carousel
-  useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 4000); // Auto-advance every 4 seconds
-
-    return () => clearInterval(timer);
-  }, []);
-
   const navigateToProduct = (productId: string) => {
     const product = products.find(p => p.id === productId);
     if (product) {
@@ -473,37 +462,6 @@ const ProductsCarousel: React.FC = () => {
     return productMap[productName] || '/products/maple-interior';
   };
 
-  const nextSlide = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev + 1) % products.length);
-    setTimeout(() => setIsTransitioning(false), 300);
-  };
-
-  const prevSlide = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
-    setTimeout(() => setIsTransitioning(false), 300);
-  };
-
-  const goToSlide = (index: number) => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentIndex(index);
-    setTimeout(() => setIsTransitioning(false), 300);
-  };
-
-  // Get visible products (current + next 2 for desktop, current + next 1 for tablet, current only for mobile)
-  const getVisibleProducts = () => {
-    const visibleProducts = [];
-    for (let i = 0; i < 3; i++) {
-      const index = (currentIndex + i) % products.length;
-      visibleProducts.push({ ...products[index], displayIndex: i });
-    }
-    return visibleProducts;
-  };
-
   return (
     <section id="products" className="py-16 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -514,86 +472,41 @@ const ProductsCarousel: React.FC = () => {
           </p>
         </div>
 
-        {/* Infinite Carousel */}
-        <div className="relative overflow-hidden">
-          <div className="flex items-center justify-center">
-            {/* Navigation Arrow - Left */}
-            <button
-              onClick={prevSlide}
-              disabled={isTransitioning}
-              className="absolute left-0 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-xl transition-all duration-200 border border-slate-200 disabled:opacity-50"
-            >
-              <ChevronLeft className="h-6 w-6 text-slate-600" />
-            </button>
+        {/* Continuously rotating carousel — pauses on hover */}
+        <div className="tg-marquee relative overflow-hidden py-4">
+          {/* Two identical copies of the list keep the loop seamless. Each card
+              carries its own right margin (rather than a flex gap) so that half
+              the track width is exactly one full copy. */}
+          <div className="tg-marquee-track flex w-max">
+            {[...products, ...products].map((product, index) => (
+              <div
+                key={`${product.id}-${index}`}
+                onClick={() => setSelectedProduct(product)}
+                aria-hidden={index >= products.length}
+                className="w-80 flex-shrink-0 mr-8 group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer border border-slate-200 hover:border-slate-400"
+              >
+                <div className="relative overflow-hidden rounded-lg mb-4">
+                  <img
+                    src={product.cardImage}
+                    alt={product.name}
+                    className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
+                </div>
 
-            {/* Products Container */}
-            <div className="w-full max-w-6xl mx-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {getVisibleProducts().map((product, index) => (
-                  <div
-                    key={`${product.id}-${currentIndex}-${index}`}
-                    onClick={() => setSelectedProduct(product)}
-                    className={`group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer border border-slate-200 hover:border-slate-400 ${
-                      isTransitioning ? 'opacity-70' : 'opacity-100'
-                    } ${
-                      index === 0 ? 'lg:scale-105 lg:z-10' : index === 1 ? 'hidden md:block' : 'hidden lg:block'
-                    }`}
-                    style={{
-                      transitionDelay: `${index * 100}ms`
-                    }}
-                  >
-                    <div className="relative overflow-hidden rounded-lg mb-4">
-                      <img
-                        src={product.cardImage}
-                        alt={product.name}
-                        className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
-                      {index === 0 && (
-                        <div className="absolute top-2 right-2 bg-slate-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                          Featured
-                        </div>
-                      )}
-                    </div>
-                    
-                    <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-slate-600 transition-colors duration-200">
-                      {product.name}
-                    </h3>
-                    
-                    <p className="text-slate-700 text-sm mb-3 line-clamp-2">
-                      {product.description}
-                    </p>
-                    
-                    <div className="text-xs text-slate-600">
-                      <span className="font-semibold">Categories: </span>
-                      <span>{product.subcategories.length} variants</span>
-                    </div>
-                  </div>
-                ))}
+                <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-slate-600 transition-colors duration-200">
+                  {product.name}
+                </h3>
+
+                <p className="text-slate-700 text-sm mb-3 line-clamp-2">
+                  {product.description}
+                </p>
+
+                <div className="text-xs text-slate-600">
+                  <span className="font-semibold">Categories: </span>
+                  <span>{product.subcategories.length} variants</span>
+                </div>
               </div>
-            </div>
-
-            {/* Navigation Arrow - Right */}
-            <button
-              onClick={nextSlide}
-              disabled={isTransitioning}
-              className="absolute right-0 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-xl transition-all duration-200 border border-slate-200 disabled:opacity-50"
-            >
-              <ChevronRight className="h-6 w-6 text-slate-600" />
-            </button>
-          </div>
-
-          {/* Carousel Indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {products.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                disabled={isTransitioning}
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                  index === currentIndex ? 'bg-slate-500 shadow-lg' : 'bg-slate-300'
-                } disabled:opacity-50`}
-              />
             ))}
           </div>
         </div>

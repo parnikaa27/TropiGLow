@@ -21,13 +21,6 @@ const ProjectGallery: React.FC = () => {
       description: "ZBOND Epoxy Mastic coating system"
     },
     {
-      id: 3,
-      title: "Marine Vessel Coating",
-      category: "Marine",
-      image: "https://i.pinimg.com/736x/2f/ec/00/2fec0008f37e239de49bb2dc0d75684a.jpg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      description: "HAWKY Antifouling protection system"
-    },
-    {
       id: 4,
       title: "Commercial Floor Finish",
       category: "Floor",
@@ -40,13 +33,6 @@ const ProjectGallery: React.FC = () => {
       category: "Wood",
       image: "https://i.pinimg.com/736x/25/9b/43/259b43e75e3ecfee410a07d5252ae57b.jpg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       description: "WOODVIBE 2K PU wood stain finish"
-    },
-    {
-      id: 6,
-      title: "Exterior Building Protection",
-      category: "Luxury Resort",
-      image: "https://i.pinimg.com/736x/7e/19/92/7e19920beb34feaa79a4f56dc9bcf128.jpg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      description: "EVERCOAT LUXURY EXTERIOR coating"
     },
     {
       id: 7,

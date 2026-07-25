@@ -56,12 +56,6 @@ const BondxPuTopcoatPage: React.FC = () => {
                 alt="BONDX PU Topcoat"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-teal-500 rounded-xl p-4 shadow-xl">
-                <div className="text-center">
-                  <div className="text-2xl font-bold">Gloss Finish</div>
-                  <div className="text-sm opacity-90">Premium Polyurethane</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

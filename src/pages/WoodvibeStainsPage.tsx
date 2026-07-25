@@ -67,7 +67,7 @@ const WoodvibeStainsPage: React.FC = () => {
               <img
                 src="/WOOD%20COATINGS/WOOD%20COATING%201.jpg"
                 alt="WOODVIBE 2K PU Wood Stains Application"
-                className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
+                className="w-full h-[400px] object-cover rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
               {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-orange-600 rounded-xl p-4 shadow-xl">
                 <div className="text-center">

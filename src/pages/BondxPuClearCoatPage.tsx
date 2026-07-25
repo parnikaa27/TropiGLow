@@ -56,12 +56,6 @@ const BondxPuClearCoatPage: React.FC = () => {
                 alt="BONDX PU Clear Coat"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
-              <div className="absolute -bottom-6 -right-6 bg-teal-500 rounded-xl p-4 shadow-xl">
-                <div className="text-center">
-                  <div className="text-2xl font-bold">Crystal Clear</div>
-                  <div className="text-sm opacity-90">Long-Lasting Finish</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
