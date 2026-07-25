@@ -64,7 +64,7 @@ const HawkyAntifoulingPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%203.jpg"
+                src="/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%201.jpg"
                 alt="HAWKY Antifouling Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />

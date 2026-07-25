@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { X } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Product {
   id: string;
@@ -24,6 +24,7 @@ interface ProductCategory {
 const ProductsCarousel: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const navigate = useNavigate();
+  const trackRef = useRef<HTMLDivElement>(null);
 
   const products: Product[] = [
     {
@@ -58,7 +59,7 @@ const ProductsCarousel: React.FC = () => {
       ],
       description: 'Premium interior and exterior decorative solutions for residential and commercial spaces',
       cardImage: '/DECORATIVE/DECORATIVE%202.jpg',
-      popupImage: '/DECORATIVE/DECORATIVE%204.jpg',
+      popupImage: '/DECORATIVE/DECORATIVE%206.jpg',
       detailedDescription: 'Our decorative paint range offers superior coverage, durability, and aesthetic appeal. From luxurious interior finishes to weather-resistant exterior coatings, each product is formulated with advanced technology to deliver exceptional performance and long-lasting beauty.',
       features: [
         'Superior Coverage & Opacity',
@@ -99,7 +100,7 @@ const ProductsCarousel: React.FC = () => {
         }
       ],
       description: 'Professional wood finishing solutions for furniture, flooring, and architectural applications',
-      cardImage: '/wc1.jpeg',
+      cardImage: '/WOOD%20COATINGS/WOOD%20COATING%203.jpg',
       popupImage: '/ws1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       detailedDescription: 'WOODVIBE series represents the pinnacle of wood coating technology. Our 2K PU systems provide exceptional durability, chemical resistance, and aesthetic enhancement for all wood surfaces.',
       features: [
@@ -141,8 +142,8 @@ const ProductsCarousel: React.FC = () => {
         }
       ],
       description: 'Decorative textured coatings for unique architectural finishes and surface treatments',
-      cardImage: '/it1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      popupImage: '/et1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      cardImage: '/DECORATIVE/DECORATIVE%205.jpg',
+      popupImage: '/DECORATIVE/DECORATIVE%204.jpg',
       detailedDescription: 'Create stunning visual effects with our range of textured finishes. From subtle textures to bold architectural statements, our products offer unlimited creative possibilities.',
       features: [
         'Multiple Texture Patterns',
@@ -258,8 +259,8 @@ const ProductsCarousel: React.FC = () => {
         }
       ],
       description: 'Industrial-grade epoxy and polyurethane systems for maximum protection and durability',
-      cardImage: 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      popupImage: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      cardImage: '/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%204.jpg',
+      popupImage: '/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%202.jpg',
       detailedDescription: 'ZBOND and BONDX series offer uncompromising protection for industrial and marine environments. These high-performance coatings provide exceptional corrosion resistance and durability. WBOND HR series is specifically formulated for high-temperature applications.',
       features: [
         'Superior Corrosion Protection',
@@ -306,8 +307,8 @@ const ProductsCarousel: React.FC = () => {
         }
       ],
       description: 'Marine-grade coatings for vessels, offshore structures, and coastal applications',
-      cardImage: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      popupImage: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      cardImage: '/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%201.jpg',
+      popupImage: '/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%203.jpg',
       detailedDescription: 'HAWKY marine coatings provide comprehensive protection against the harsh marine environment. From antifouling to anti-corrosive systems, we ensure your marine assets stay protected.',
       features: [
         'Superior Antifouling Performance',
@@ -343,8 +344,8 @@ const ProductsCarousel: React.FC = () => {
         }
       ],
       description: 'Durable floor coating systems for industrial, commercial, and residential applications',
-      cardImage: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      popupImage: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      cardImage: '/FLOOR%20COATING/FLOOR%20COATING%201.jpg',
+      popupImage: '/FLOOR%20COATING/FLOOR%20COATING%203.jpg',
       detailedDescription: 'STEPIN floor coating system provides exceptional durability and performance for high-traffic areas. Our floor coatings offer chemical resistance, easy maintenance, and long-lasting protection.',
       features: [
         'High Traffic Durability',
@@ -414,6 +415,29 @@ const ProductsCarousel: React.FC = () => {
     };
   }, []);
 
+  // Must match the animation duration declared for .tg-marquee-track in index.css
+  const CYCLE_MS = 60000;
+
+  /* Jump the track one whole card, instantly. Advancing the animation's own
+     timeline (rather than nudging a separate offset) means the drift picks up
+     seamlessly from the new position instead of fighting it. */
+  const skip = (direction: 1 | -1) => {
+    const animation = trackRef.current?.getAnimations()[0];
+    if (!animation) return; // reduced-motion: the track scrolls manually instead
+
+    const oneCardMs = CYCLE_MS / products.length;
+    let now = Number(animation.currentTime) || 0;
+
+    // Stepping back past zero would finish the animation and freeze the track,
+    // so keep the timeline clear of its start. Shifting by whole cycles is
+    // invisible, since the transform repeats every CYCLE_MS.
+    if (direction === -1 && now < oneCardMs * 2) {
+      now += CYCLE_MS * 10;
+    }
+
+    animation.currentTime = now + direction * oneCardMs;
+  };
+
   const closePopup = () => {
     setSelectedProduct(null);
   };
@@ -472,12 +496,15 @@ const ProductsCarousel: React.FC = () => {
           </p>
         </div>
 
-        {/* Continuously rotating carousel — pauses on hover */}
-        <div className="tg-marquee relative overflow-hidden py-4">
+        {/* Continuously rotating carousel — pauses on hover, arrows fast-forward */}
+        <div className="relative">
+          {/* The arrows live OUTSIDE this element on purpose: hovering them must
+              not trigger the pause-on-hover rule, or they could not fast-forward. */}
+          <div className="tg-marquee overflow-hidden py-4">
           {/* Two identical copies of the list keep the loop seamless. Each card
               carries its own right margin (rather than a flex gap) so that half
               the track width is exactly one full copy. */}
-          <div className="tg-marquee-track flex w-max">
+          <div ref={trackRef} className="tg-marquee-track flex w-max">
             {[...products, ...products].map((product, index) => (
               <div
                 key={`${product.id}-${index}`}
@@ -509,6 +536,24 @@ const ProductsCarousel: React.FC = () => {
               </div>
             ))}
           </div>
+          </div>
+
+          {/* Fast-forward / rewind. Each press races the track through exactly
+              one card, so repeated presses skip ahead as fast as you click. */}
+          <button
+            onClick={() => skip(-1)}
+            aria-label="Scroll products backward"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-xl transition-all duration-200 border border-slate-200"
+          >
+            <ChevronLeft className="h-6 w-6 text-slate-600" />
+          </button>
+          <button
+            onClick={() => skip(1)}
+            aria-label="Scroll products forward"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-xl transition-all duration-200 border border-slate-200"
+          >
+            <ChevronRight className="h-6 w-6 text-slate-600" />
+          </button>
         </div>
 
         {/* Product Popup Modal */}

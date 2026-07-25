@@ -28,4 +28,8 @@
   .tg-marquee-track {
     animation: none;
   }
+  /* Without the animation the track would be unreachable, so let it be swiped */
+  .tg-marquee {
+    overflow-x: auto;
+  }
 }
