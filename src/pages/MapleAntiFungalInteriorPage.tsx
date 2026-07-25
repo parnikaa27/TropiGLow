@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowLeft, CheckCircle, Shield, Droplets, Clock, Thermometer, Eye, Star, Zap } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const MapleAntiFungalInteriorPage: React.FC = () => {
+const EverluxAntiFungalInteriorPage: React.FC = () => {
   const navigate = useNavigate();
 
   const scrollToContact = () => {
@@ -37,7 +37,7 @@ const MapleAntiFungalInteriorPage: React.FC = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <Shield className="h-8 w-8 text-green-300" />
-                <h1 className="text-5xl font-bold">MAPLE ANTI FUNGAL INTERIOR</h1>
+                <h1 className="text-5xl font-bold">EVERLUX ANTI FUNGAL INTERIOR</h1>
               </div>
               <p className="text-emerald-200 text-xl mb-6">Advanced Anti-Fungal Interior Protection</p>
               <p className="text-lg leading-relaxed mb-8">
@@ -64,8 +64,8 @@ const MapleAntiFungalInteriorPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="/mi3.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                alt="MAPLE ANTI FUNGAL INTERIOR Application"
+                src="/DECORATIVE/DECORATIVE%205.jpg"
+                alt="EVERLUX ANTI FUNGAL INTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
               {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl p-4 shadow-xl">
@@ -281,7 +281,7 @@ const MapleAntiFungalInteriorPage: React.FC = () => {
         <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Protect Your Home from Mold & Mildew</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
-            Create a healthier living environment with MAPLE ANTI FUNGAL INTERIOR. Get expert advice on 
+            Create a healthier living environment with EVERLUX ANTI FUNGAL INTERIOR. Get expert advice on 
             application techniques and surface preparation for maximum anti-fungal protection.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -304,4 +304,4 @@ const MapleAntiFungalInteriorPage: React.FC = () => {
   );
 };
 
-export default MapleAntiFungalInteriorPage;
+export default EverluxAntiFungalInteriorPage;

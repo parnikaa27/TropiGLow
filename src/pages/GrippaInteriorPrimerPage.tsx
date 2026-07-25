@@ -37,13 +37,13 @@ const GrippaInteriorPrimerPage: React.FC = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <Layers className="h-8 w-8 text-blue-300" />
-                <h1 className="text-5xl font-bold">GRIPPA INTERIOR PRIMER</h1>
+                <h1 className="text-5xl font-bold">GRIPPA INTERIOR / EXTERIOR WALL PRIMER</h1>
               </div>
-              <p className="text-emerald-200 text-xl mb-6">High-Performance Interior Wall Primer</p>
+              <p className="text-emerald-200 text-xl mb-6">High-Performance Interior &amp; Exterior Wall Primer</p>
               <p className="text-lg leading-relaxed mb-8">
-                GRIPPA Interior Primer provides exceptional adhesion and surface preparation for interior walls. 
-                Formulated to seal porous surfaces, enhance paint adhesion, and ensure uniform topcoat appearance, 
-                it's the perfect foundation for all interior painting projects.
+                GRIPPA Interior / Exterior Wall Primer provides exceptional adhesion and surface preparation for both
+                interior and exterior walls. Formulated to seal porous surfaces, enhance paint adhesion, and ensure a
+                uniform topcoat appearance, it's the perfect foundation for all wall painting projects — indoors and out.
               </p>
               
               <div className="flex flex-wrap gap-4">
@@ -65,7 +65,7 @@ const GrippaInteriorPrimerPage: React.FC = () => {
             <div className="relative">
               <img
                 src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                alt="GRIPPA Interior Primer Application"
+                alt="GRIPPA Interior / Exterior Wall Primer Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
               {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-4 shadow-xl">
@@ -82,7 +82,7 @@ const GrippaInteriorPrimerPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Primer Features */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Interior Primer Features</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Interior &amp; Exterior Primer Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -278,9 +278,9 @@ const GrippaInteriorPrimerPage: React.FC = () => {
 
         {/* Contact CTA */}
         <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
-          <h3 className="text-2xl font-bold text-slate-800 mb-4">Perfect Interior Surface Preparation</h3>
+          <h3 className="text-2xl font-bold text-slate-800 mb-4">Perfect Interior &amp; Exterior Surface Preparation</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
-            Ensure professional results with GRIPPA Interior Primer. Get expert advice on surface preparation, 
+            Ensure professional results with GRIPPA Interior / Exterior Wall Primer. Get expert advice on surface preparation,
             application techniques, and paint system compatibility for optimal performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

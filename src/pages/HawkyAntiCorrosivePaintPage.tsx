@@ -64,7 +64,7 @@ const HawkyAntiCorrosivePaintPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%202.jpg"
                 alt="HAWKY Anti-Corrosive Paint Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />

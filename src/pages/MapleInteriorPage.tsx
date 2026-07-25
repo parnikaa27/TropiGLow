@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowLeft, CheckCircle, Palette, Shield, Droplets, Clock, Thermometer, Eye, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const MapleInteriorPage: React.FC = () => {
+const EverluxInteriorPage: React.FC = () => {
   const navigate = useNavigate();
 
   const scrollToContact = () => {
@@ -35,10 +35,10 @@ const MapleInteriorPage: React.FC = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-4">MAPLE INTERIOR</h1>
+              <h1 className="text-5xl font-bold mb-4">EVERLUX INTERIOR</h1>
               <p className="text-emerald-200 text-xl mb-6">Premium Interior Emulsion Paint</p>
               <p className="text-lg leading-relaxed mb-8">
-                Experience the perfect blend of superior coverage, exceptional washability, and long-lasting beauty with MAPLE INTERIOR. 
+                Experience the perfect blend of superior coverage, exceptional washability, and long-lasting beauty with EVERLUX INTERIOR. 
                 Formulated with advanced acrylic polymers for professional results every time.
               </p>
               
@@ -60,8 +60,8 @@ const MapleInteriorPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="/mi1.jpeg"
-                alt="MAPLE INTERIOR Application"
+                src="/DECORATIVE/DECORATIVE%201.jpg"
+                alt="EVERLUX INTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
              {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl p-4 shadow-xl">
@@ -297,7 +297,7 @@ const MapleInteriorPage: React.FC = () => {
           
        {/* Downloadable Data Sheet link */}
 <div className="mt-6">
-{/* Place the PDF file in your public/assets folder at: /public/assets/Allura-AntiFungal-DataSheet.pdf */}
+{/* Place the PDF file in your public/assets folder at: /public/assets/Evercoat-AntiFungal-DataSheet.pdf */}
 <a
 href="/anti_fungal.pdf"
 download="Data Sheet.pdf"
@@ -315,4 +315,4 @@ Download Data Sheet
 );
 };
 
-export default MapleInteriorPage;
+export default EverluxInteriorPage;

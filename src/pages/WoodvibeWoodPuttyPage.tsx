@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowLeft, CheckCircle, Palette, Shield, Droplets, Clock, Thermometer, Eye, Star, Zap } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const SlikoAcrylicPuttyPage: React.FC = () => {
+const WoodvibeWoodPuttyPage: React.FC = () => {
   const navigate = useNavigate();
 
   const scrollToContact = () => {
@@ -32,40 +32,40 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
           </button>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <Palette className="h-8 w-8 text-gray-300" />
-                <h1 className="text-5xl font-bold">SLIKO INTERIOR / EXTERIOR ACRYLIC PUTTY</h1>
+                <h1 className="text-5xl font-bold">WOOD VIBE WOOD PUTTY</h1>
               </div>
-              <p className="text-emerald-200 text-xl mb-6">Premium Acrylic Wall Putty for Interior & Exterior</p>
+              <p className="text-emerald-200 text-xl mb-6">Wood Putty for Grain Filling &amp; Repair</p>
               <p className="text-lg leading-relaxed mb-8">
-                SLIKO Acrylic Putty is a high-performance wall putty suitable for both interior and exterior applications. 
-                Formulated with premium acrylic polymers, it provides excellent adhesion, smooth finish, and superior 
-                durability for perfect surface preparation.
+                Wood Vibe Wood Putty is a specialized wood putty that fills grain, nail holes, cracks and imperfections
+                in wooden surfaces for a flawless result. It sands smooth easily and accepts wood stains and finishes
+                evenly, blending seamlessly with the natural look of your woodwork.
               </p>
-              
+
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
                   <Star className="h-5 w-5 text-emerald-300" />
-                  <span>Interior & Exterior</span>
+                  <span>Grain &amp; Hole Filling</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
                   <Shield className="h-5 w-5 text-cyan-300" />
-                  <span>Superior Adhesion</span>
+                  <span>Strong Wood Adhesion</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
                   <Eye className="h-5 w-5 text-blue-300" />
-                  <span>Smooth Finish</span>
+                  <span>Takes Stain Evenly</span>
                 </div>
               </div>
             </div>
-            
+
             <div className="relative">
               <img
                 src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                alt="SLIKO Acrylic Putty Application"
+                alt="Wood Vibe Wood Putty Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-gray-500 to-slate-600 rounded-xl p-4 shadow-xl">
@@ -82,38 +82,38 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Putty Features */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Premium Acrylic Putty Features</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Wood Putty Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Star,
-                title: "Dual Application",
-                description: "Suitable for both interior and exterior surfaces with consistent performance."
-              },
-              {
-                icon: Shield,
-                title: "Superior Adhesion",
-                description: "Excellent bonding to various substrates ensuring long-lasting performance."
-              },
-              {
-                icon: Eye,
-                title: "Smooth Finish",
-                description: "Creates perfectly smooth surface ready for premium paint application."
-              },
-              {
-                icon: Droplets,
-                title: "Water Resistant",
-                description: "Excellent water resistance makes it suitable for exterior applications."
+                title: "Grain & Hole Filling",
+                description: "Fills wood grain, nail holes, cracks and imperfections for a flawless surface."
               },
               {
                 icon: Zap,
                 title: "Easy Sanding",
-                description: "Sands easily to achieve desired smoothness without clogging sandpaper."
+                description: "Sands smooth effortlessly without clogging sandpaper for a fine finish."
               },
               {
-                icon: Clock,
-                title: "Quick Drying",
-                description: "Fast-drying formula allows for efficient project completion."
+                icon: Eye,
+                title: "Takes Stain Evenly",
+                description: "Accepts wood stains and finishes evenly to blend with natural wood."
+              },
+              {
+                icon: Shield,
+                title: "Strong Adhesion to Wood",
+                description: "Bonds firmly to wooden surfaces ensuring durable, long-lasting repairs."
+              },
+              {
+                icon: Droplets,
+                title: "Minimal Shrinkage",
+                description: "Cures with minimal shrinkage to keep repaired areas level and stable."
+              },
+              {
+                icon: CheckCircle,
+                title: "Smooth Finish",
+                description: "Creates a perfectly smooth surface ready for staining or painting."
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
@@ -127,7 +127,7 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Technical Specifications 
+        {/* Technical Specifications
         <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 mb-16">
           <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
             <Thermometer className="h-6 w-6 text-gray-600 mr-3" />
@@ -159,11 +159,11 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
             <h3 className="text-xl font-bold text-slate-800 mb-6">Versatile Applications</h3>
             <div className="space-y-4">
               {[
-                "Interior Walls - Living rooms, bedrooms, and office spaces",
-                "Exterior Walls - Building facades and outdoor surfaces",
-                "Concrete Surfaces - New and existing concrete substrates",
-                "Masonry Walls - Brick, block, and stone surfaces",
-                "Renovation Projects - Surface repair and preparation work"
+                "Furniture - Repairing scratches, dents, and worn edges on wooden furniture",
+                "Doors & Windows - Filling gaps, joints, and holes in wooden frames",
+                "Flooring - Patching cracks and gaps in hardwood and parquet floors",
+                "Cabinetry - Smoothing nail holes and seams in cabinets and shelving",
+                "Woodcraft Projects - Surface repair and preparation for finishing work"
               ].map((application, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-gray-600 flex-shrink-0 mt-0.5" />
@@ -177,12 +177,12 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
             <h3 className="text-xl font-bold text-slate-800 mb-6">Surface Preparation Benefits</h3>
             <div className="space-y-4">
               {[
-                "Perfect Smoothness - Creates ideal surface for premium paint finishes",
-                "Crack Filling - Effectively fills minor cracks and imperfections",
-                "Cost Effective - Reduces paint consumption with better surface preparation",
-                "Professional Results - Ensures high-quality paint system performance",
+                "Perfect Smoothness - Creates ideal surface for stain and finish application",
+                "Grain Filling - Effectively fills open grain, nail holes, and minor cracks",
+                "Even Stain Uptake - Accepts stains and finishes uniformly with the wood",
+                "Professional Results - Ensures flawless, seamless woodwork repairs",
                 "Easy Application - User-friendly consistency for smooth application",
-                "Versatile Use - Single product for both interior and exterior needs"
+                "Minimal Shrinkage - Keeps repaired areas level for lasting results"
               ].map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-gray-600 flex-shrink-0 mt-0.5" />
@@ -193,7 +193,7 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Application Instructions 
+        {/* Application Instructions
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Surface Preparation</h3>
@@ -235,7 +235,7 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
           </div>
         </div> */}
 
-        {/* Available Options 
+        {/* Available Options
         <div className="bg-gradient-to-r from-gray-600 to-slate-600 rounded-xl p-8 text-white mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div>
@@ -246,7 +246,7 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
                 <span className="inline-block bg-white bg-opacity-20 rounded-full px-3 py-1 text-sm mr-2 mb-2">Universal Grade</span>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-bold mb-4">Pack Sizes</h3>
               <div className="space-y-2">
@@ -256,7 +256,7 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
                 <span className="inline-block bg-white bg-opacity-20 rounded-full px-3 py-1 text-sm mr-2 mb-2">40 Kg</span>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-bold mb-4">Quality Assurance</h3>
               <div className="space-y-2">
@@ -279,17 +279,17 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
 
         {/* Contact CTA */}
         <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
-          <h3 className="text-2xl font-bold text-slate-800 mb-4">Perfect Surface Preparation Solutions</h3>
+          <h3 className="text-2xl font-bold text-slate-800 mb-4">Flawless Wood Repair Solutions</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
-            Achieve professional surface preparation with SLIKO Acrylic Putty. Get expert advice on application 
-            techniques, surface preparation, and achieving perfect smoothness for premium paint finishes.
+            Achieve professional wood repairs with Wood Vibe Wood Putty. Get expert advice on grain filling,
+            sanding, and achieving even stain uptake for a flawless finish on all your woodwork.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToContact}
               className="bg-gradient-to-r from-gray-600 to-slate-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-gray-700 hover:to-slate-700 transition-all duration-200 shadow-lg"
             >
-              Get Surface Preparation Consultation
+              Get Wood Repair Consultation
             </button>
             <button
               onClick={scrollToContact}
@@ -304,4 +304,4 @@ const SlikoAcrylicPuttyPage: React.FC = () => {
   );
 };
 
-export default SlikoAcrylicPuttyPage;
+export default WoodvibeWoodPuttyPage;

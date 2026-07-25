@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowLeft, CheckCircle, Palette, Shield, Droplets, Clock, Thermometer, Eye, Star, Crown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const MapleLuxuryInteriorPage: React.FC = () => {
+const EverluxLuxuryInteriorPage: React.FC = () => {
   const navigate = useNavigate();
 
   const scrollToContact = () => {
@@ -37,11 +37,11 @@ const MapleLuxuryInteriorPage: React.FC = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <Crown className="h-8 w-8 text-emerald-300" />
-                <h1 className="text-5xl font-bold">MAPLE LUXURY INTERIOR</h1>
+                <h1 className="text-5xl font-bold">EVERLUX LUXURY INTERIOR</h1>
               </div>
               <p className="text-emerald-200 text-xl mb-6">Ultra-Premium Interior Emulsion Paint</p>
               <p className="text-lg leading-relaxed mb-8">
-                Experience the pinnacle of interior paint technology with MAPLE LUXURY INTERIOR. 
+                Experience the pinnacle of interior paint technology with EVERLUX LUXURY INTERIOR. 
                 Formulated with premium acrylic resins and advanced additives for exceptional performance, 
                 superior stain resistance, and a luxurious finish that transforms any space.
               </p>
@@ -64,8 +64,8 @@ const MapleLuxuryInteriorPage: React.FC = () => {
             
             <div className="relative">
               <img
-                src="/mi2.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                alt="MAPLE LUXURY INTERIOR Application"
+                src="/DECORATIVE/DECORATIVE%203.jpg"
+                alt="EVERLUX LUXURY INTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
               {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl p-4 shadow-xl">
@@ -281,7 +281,7 @@ const MapleLuxuryInteriorPage: React.FC = () => {
         <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Experience Luxury Interior Painting</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
-            Elevate your space with MAPLE LUXURY INTERIOR. Get professional consultation on premium color selection, 
+            Elevate your space with EVERLUX LUXURY INTERIOR. Get professional consultation on premium color selection, 
             surface preparation, and application techniques for exceptional results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -304,4 +304,4 @@ const MapleLuxuryInteriorPage: React.FC = () => {
   );
 };
 
-export default MapleLuxuryInteriorPage;
+export default EverluxLuxuryInteriorPage;

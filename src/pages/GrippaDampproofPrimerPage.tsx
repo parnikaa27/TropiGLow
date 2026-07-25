@@ -37,11 +37,11 @@ const GrippaDampproofPrimerPage: React.FC = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <Droplets className="h-8 w-8 text-cyan-300" />
-                <h1 className="text-5xl font-bold">GRIPPA DAMPPROOF PRIMER</h1>
+                <h1 className="text-5xl font-bold">GRIPPA DAMP PROOF WALL PRIMER</h1>
               </div>
               <p className="text-emerald-200 text-xl mb-6">Advanced Moisture-Resistant Primer System</p>
               <p className="text-lg leading-relaxed mb-8">
-                GRIPPA Dampproof Primer provides exceptional moisture resistance and vapor barrier properties. 
+                GRIPPA Damp Proof Wall Primer provides exceptional moisture resistance and vapor barrier properties.
                 Specially formulated for damp and moisture-prone areas, it creates an impermeable barrier that 
                 prevents moisture-related paint failures and substrate damage.
               </p>

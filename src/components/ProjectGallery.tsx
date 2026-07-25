@@ -8,10 +8,10 @@ const ProjectGallery: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: "Luxury Residential Interior",
-      category: "Residential",
+      title: "Luxury Resort Interior",
+      category: "Luxury Resort",
       image: "https://i.pinimg.com/736x/4d/d9/5d/4dd95da0f74e6e6cae68c69c5a56f2d2.jpg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      description: "Premium MAPLE LUXURY INTERIOR application"
+      description: "Premium EVERLUX LUXURY INTERIOR application"
     },
     {
       id: 2,
@@ -44,13 +44,139 @@ const ProjectGallery: React.FC = () => {
     {
       id: 6,
       title: "Exterior Building Protection",
-      category: "Residential",
+      category: "Luxury Resort",
       image: "https://i.pinimg.com/736x/7e/19/92/7e19920beb34feaa79a4f56dc9bcf128.jpg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      description: "ALLURA LUXURY EXTERIOR coating"
+      description: "EVERCOAT LUXURY EXTERIOR coating"
+    },
+    {
+      id: 7,
+      title: "Resort Lobby Interior",
+      category: "Luxury Resort",
+      image: "/DECORATIVE/DECORATIVE%201.jpg",
+      description: "EVERLUX premium decorative interior finish"
+    },
+    {
+      id: 8,
+      title: "Luxury Suite Walls",
+      category: "Luxury Resort",
+      image: "/DECORATIVE/DECORATIVE%202.jpg",
+      description: "EVERLUX luxury interior application"
+    },
+    {
+      id: 9,
+      title: "Resort Lounge Accent",
+      category: "Luxury Resort",
+      image: "/DECORATIVE/DECORATIVE%203.jpg",
+      description: "EVERLUX designer decorative finish"
+    },
+    {
+      id: 10,
+      title: "Boutique Resort Interior",
+      category: "Luxury Resort",
+      image: "/DECORATIVE/DECORATIVE%204.jpg",
+      description: "EVERLUX premium wall finish"
+    },
+    {
+      id: 11,
+      title: "Resort Villa Facade",
+      category: "Luxury Resort",
+      image: "/DECORATIVE/DECORATIVE%205.jpg",
+      description: "EVERCOAT decorative exterior coating"
+    },
+    {
+      id: 12,
+      title: "Poolside Facade Finish",
+      category: "Luxury Resort",
+      image: "/DECORATIVE/DECORATIVE%206.jpg",
+      description: "EVERCOAT luxury exterior application"
+    },
+    {
+      id: 13,
+      title: "Resort Lobby Flooring",
+      category: "Floor",
+      image: "/FLOOR%20COATING/FLOOR%20COATING.jpg",
+      description: "STEPIN floor coating system"
+    },
+    {
+      id: 14,
+      title: "Commercial Floor Finish",
+      category: "Floor",
+      image: "/FLOOR%20COATING/FLOOR%20COATING%20.jpg",
+      description: "STEPIN durable floor coating"
+    },
+    {
+      id: 15,
+      title: "Seamless Floor Coating",
+      category: "Floor",
+      image: "/FLOOR%20COATING/FLOOR%20COATING%201.jpg",
+      description: "STEPIN seamless floor system"
+    },
+    {
+      id: 16,
+      title: "High-Traffic Floor Finish",
+      category: "Floor",
+      image: "/FLOOR%20COATING/FLOOR%20COATING%203.jpg",
+      description: "STEPIN anti-slip floor coating"
+    },
+    {
+      id: 17,
+      title: "Marine Hull Protection",
+      category: "Marine",
+      image: "/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE.jpg",
+      description: "HAWKY marine coating system"
+    },
+    {
+      id: 18,
+      title: "Vessel Antifouling",
+      category: "Marine",
+      image: "/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%201.jpg",
+      description: "HAWKY antifouling protection"
+    },
+    {
+      id: 19,
+      title: "Anti-Corrosive Marine Coat",
+      category: "Marine",
+      image: "/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%202.jpg",
+      description: "HAWKY anti-corrosive paint"
+    },
+    {
+      id: 20,
+      title: "Offshore Structure Coating",
+      category: "Marine",
+      image: "/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%203.jpg",
+      description: "HAWKY marine protective system"
+    },
+    {
+      id: 21,
+      title: "Coastal Steel Protection",
+      category: "Marine",
+      image: "/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%204.jpg",
+      description: "HAWKY marine primer & topcoat"
+    },
+    {
+      id: 22,
+      title: "Wood Furniture Finish",
+      category: "Wood",
+      image: "/WOOD%20COATINGS/WOOD%20COATING.jpg",
+      description: "WOODVIBE 2K PU wood coating"
+    },
+    {
+      id: 23,
+      title: "Wooden Flooring Coat",
+      category: "Wood",
+      image: "/WOOD%20COATINGS/WOOD%20COATING%201.jpg",
+      description: "WOODVIBE 2K PU wood stain finish"
+    },
+    {
+      id: 24,
+      title: "Architectural Woodwork",
+      category: "Wood",
+      image: "/WOOD%20COATINGS/WOOD%20COATING%202.jpg",
+      description: "WOODVIBE 2K PU clear coat"
     }
   ];
 
-  const categories = ['All', 'Residential', 'Industrial', 'Marine', 'Floor', 'Wood'];
+  const categories = ['All', 'Luxury Resort', 'Industrial', 'Marine', 'Floor', 'Wood'];
 
   const filteredProjects = selectedCategory === 'All' 
     ? projects 
@@ -78,7 +204,7 @@ const ProjectGallery: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-slate-800 mb-4">Project Gallery</h2>
           <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-            Discover our expertise through a showcase of successful projects across residential, industrial, marine, and specialized coating applications.
+            Discover our expertise through a showcase of successful projects across luxury resort, industrial, marine, and specialized coating applications.
           </p>
         </div>
 

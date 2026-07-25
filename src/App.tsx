@@ -31,12 +31,19 @@ import ExteriorTexturedFinishesPage from './pages/ExteriorTexturedFinishesPage';
 import StuccoPaintPage from './pages/StuccoPaintPage';
 
 // Primer & Putty
+import GrippaWashPrimerPage from './pages/GrippaWashPrimerPage';
+import GrippaWoodPrimerPage from './pages/GrippaWoodPrimerPage';
 import GrippaInteriorPrimerPage from './pages/GrippaInteriorPrimerPage';
-import GrippaExteriorPrimerPage from './pages/GrippaExteriorPrimerPage';
 import GrippaBarrierCoatingPage from './pages/GrippaBarrierCoatingPage';
 import GrippaDampproofPrimerPage from './pages/GrippaDampproofPrimerPage';
 import SlikoAcrylicPuttyPage from './pages/SlikoAcrylicPuttyPage';
 import SlikoCrackfillPage from './pages/SlikoCrackfillPage';
+import WoodvibeWoodPuttyPage from './pages/WoodvibeWoodPuttyPage';
+
+// Thinner
+import EpoxyThinnerPage from './pages/EpoxyThinnerPage';
+import PuThinnerPage from './pages/PuThinnerPage';
+import AllInOneThinnerPage from './pages/AllInOneThinnerPage';
 
 // Protective Coatings
 import BondxPuClearCoatPage from './pages/BondxPuClearCoatPage';
@@ -115,12 +122,19 @@ function App() {
           <Route path="/products/stucco-paint" element={<StuccoPaintPage />} />
 
           {/* Primer & Putty */}
+          <Route path="/products/grippa-2k-wash-primer" element={<GrippaWashPrimerPage />} />
+          <Route path="/products/grippa-2k-wood-primer" element={<GrippaWoodPrimerPage />} />
           <Route path="/products/grippa-interior-primer" element={<GrippaInteriorPrimerPage />} />
-          <Route path="/products/grippa-exterior-primer" element={<GrippaExteriorPrimerPage />} />
           <Route path="/products/grippa-barrier-coating" element={<GrippaBarrierCoatingPage />} />
           <Route path="/products/grippa-dampproof-primer" element={<GrippaDampproofPrimerPage />} />
           <Route path="/products/sliko-acrylic-putty" element={<SlikoAcrylicPuttyPage />} />
           <Route path="/products/sliko-crackfill" element={<SlikoCrackfillPage />} />
+          <Route path="/products/woodvibe-wood-putty" element={<WoodvibeWoodPuttyPage />} />
+
+          {/* Thinner */}
+          <Route path="/products/epoxy-thinner" element={<EpoxyThinnerPage />} />
+          <Route path="/products/pu-thinner" element={<PuThinnerPage />} />
+          <Route path="/products/all-in-one-thinner" element={<AllInOneThinnerPage />} />
 
           {/* Protective Coatings */}
           <Route path="/products/bondx-pu-clear-coat" element={<BondxPuClearCoatPage />} />

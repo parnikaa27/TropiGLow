@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowLeft, CheckCircle, Shield, Clock, Thermometer, Eye, Star, Sun, Crown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const AlluraLuxuryExteriorPage: React.FC = () => {
+const EvercoatLuxuryExteriorPage: React.FC = () => {
   const navigate = useNavigate();
 
   const scrollToContact = () => {
@@ -37,11 +37,11 @@ const AlluraLuxuryExteriorPage: React.FC = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <Crown className="h-8 w-8 text-yellow-300" />
-                <h1 className="text-5xl font-bold">ALLURA LUXURY EXTERIOR</h1>
+                <h1 className="text-5xl font-bold">EVERCOAT LUXURY EXTERIOR</h1>
               </div>
               <p className="text-emerald-200 text-xl mb-6">Premium Exterior Paint with Advanced Weather Protection</p>
               <p className="text-lg leading-relaxed mb-8">
-                ALLURA LUXURY EXTERIOR represents the pinnacle of exterior paint technology. With enhanced weather resistance, 
+                EVERCOAT LUXURY EXTERIOR represents the pinnacle of exterior paint technology. With enhanced weather resistance, 
                 superior color retention, and advanced protective properties, it delivers exceptional performance and luxury 
                 aesthetics for premium exterior applications.
               </p>
@@ -65,7 +65,7 @@ const AlluraLuxuryExteriorPage: React.FC = () => {
             <div className="relative">
               <img
                 src="ae3.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                alt="ALLURA LUXURY EXTERIOR Application"
+                alt="EVERCOAT LUXURY EXTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-4 shadow-xl">
@@ -278,7 +278,7 @@ const AlluraLuxuryExteriorPage: React.FC = () => {
         <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Experience Luxury Exterior Protection</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
-            Transform your exterior with ALLURA LUXURY EXTERIOR. Get premium consultation on surface preparation, 
+            Transform your exterior with EVERCOAT LUXURY EXTERIOR. Get premium consultation on surface preparation, 
             color selection, and professional application techniques for exceptional luxury results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -301,4 +301,4 @@ const AlluraLuxuryExteriorPage: React.FC = () => {
   );
 };
 
-export default AlluraLuxuryExteriorPage;
+export default EvercoatLuxuryExteriorPage;

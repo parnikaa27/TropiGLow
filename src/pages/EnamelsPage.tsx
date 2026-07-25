@@ -37,19 +37,19 @@ const EnamelsPage: React.FC = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <Palette className="h-8 w-8 text-orange-300" />
-                <h1 className="text-5xl font-bold">ENAMELS</h1>
+                <h1 className="text-5xl font-bold">SHYNEX ALL-IN-ONE</h1>
               </div>
-              <p className="text-emerald-200 text-xl mb-6">Premium Enamel Paints for Superior Finish</p>
+              <p className="text-emerald-200 text-xl mb-6">Shynex All-in-One - Matte and Glossy Finish</p>
               <p className="text-lg leading-relaxed mb-8">
-                Our premium enamel paint collection offers exceptional durability, high-gloss finish, and superior 
-                protection for both interior and exterior applications. Formulated with advanced alkyd resins for 
-                long-lasting beauty and performance.
+                Shynex All-in-One is a premium enamel that delivers exceptional durability with your choice of a smooth
+                matte or brilliant glossy finish, offering superior protection for both interior and exterior
+                applications. Formulated with advanced resins for long-lasting beauty and performance.
               </p>
               
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
                   <Star className="h-5 w-5 text-blue-300" />
-                  <span>High-Gloss Finish</span>
+                  <span>Matte &amp; Glossy Finish</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2">
                   <Shield className="h-5 w-5 text-cyan-300" />
@@ -65,7 +65,7 @@ const EnamelsPage: React.FC = () => {
             <div className="relative">
               <img
                 src="https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                alt="ENAMELS Application"
+                alt="Shynex All-in-One Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
               {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl p-4 shadow-xl">
@@ -82,13 +82,13 @@ const EnamelsPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Enamel Features */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Premium Enamel Features</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Shynex All-in-One Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Star,
-                title: "High-Gloss Finish",
-                description: "Exceptional gloss retention and mirror-like finish that enhances surface beauty."
+                title: "Matte & Glossy Finish",
+                description: "One product, two looks — choose a smooth matte or a mirror-like glossy finish to enhance any surface."
               },
               {
                 icon: Shield,
@@ -282,10 +282,10 @@ const EnamelsPage: React.FC = () => {
 
         {/* Contact CTA */}
         <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
-          <h3 className="text-2xl font-bold text-slate-800 mb-4">Get Professional Enamel Solutions</h3>
+          <h3 className="text-2xl font-bold text-slate-800 mb-4">Get Professional Shynex Solutions</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
-            Achieve superior finish quality with our premium enamel paints. Get expert advice on surface preparation, 
-            application techniques, and color selection for exceptional results.
+            Achieve superior finish quality with Shynex All-in-One. Get expert advice on surface preparation,
+            application techniques, and color selection for exceptional results in matte or glossy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -298,7 +298,7 @@ const EnamelsPage: React.FC = () => {
               onClick={scrollToContact}
               className="border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
-              Request Enamel Sample
+              Request Shynex Sample
             </button>
           </div>
         </div>

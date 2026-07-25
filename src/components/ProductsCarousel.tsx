@@ -36,31 +36,31 @@ const ProductsCarousel: React.FC = () => {
           name: 'Interior',
           id: 'interior',
           items: [
-            'MAPLE INTERIOR',
-            'MAPLE LUXURY INTERIOR', 
-            'MAPLE ANTI FUNGAL INTERIOR'
+            'EVERLUX INTERIOR',
+            'EVERLUX LUXURY INTERIOR',
+            'EVERLUX ANTI FUNGAL INTERIOR'
           ]
         },
         {
           name: 'Exterior',
           id: 'exterior',
           items: [
-            'ALLURA EXTERIOR',
-            'ALLURA LUXURY EXTERIOR',
-            'ALLURA ANTI FUNGAL EXTERIOR'
+            'EVERCOAT EXTERIOR',
+            'EVERCOAT LUXURY EXTERIOR',
+            'EVERCOAT ANTI FUNGAL EXTERIOR'
           ]
         },
         {
-          name: 'Enamel',
-          id: 'enamel',
+          name: 'Shynex',
+          id: 'shynex',
           items: [
-            'ENAMELS'
+            'Shynex All-in-One - Matte and Glossy finish'
           ]
         }
       ],
       description: 'Premium interior and exterior decorative solutions for residential and commercial spaces',
-      cardImage: '/mi2.jpeg',
-      popupImage: '/mi1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      cardImage: '/DECORATIVE/DECORATIVE%202.jpg',
+      popupImage: '/DECORATIVE/DECORATIVE%204.jpg',
       detailedDescription: 'Our decorative paint range offers superior coverage, durability, and aesthetic appeal. From luxurious interior finishes to weather-resistant exterior coatings, each product is formulated with advanced technology to deliver exceptional performance and long-lasting beauty.',
       features: [
         'Superior Coverage & Opacity',
@@ -177,18 +177,29 @@ const ProductsCarousel: React.FC = () => {
           name: 'Primers',
           id: 'primers',
           items: [
-            'Grippa Interior Primer',
-            'Grippa Exterior Primer',
-            'Grippa Barrier Coating',
-            'Grippa Dampproof Primer'
+            'Grippa 2K Wash Primer',
+            'Grippa 2K Wood Primer',
+            'Grippa Interior / Exterior Wall Primer',
+            'Grippa Damp Proof Wall Primer',
+            'Grippa Barrier Coating'
           ]
         },
         {
           name: 'Putty & Fillers',
           id: 'putty-fillers',
           items: [
-            'Sliko ACRYLIC INT/EXT PUTTY',
-            'Sliko CRACKFILL'
+            'Sliko Interior / Exterior Acrylic Putty',
+            'Sliko Crack Fill',
+            'Wood Vibe Wood Putty'
+          ]
+        },
+        {
+          name: 'Thinner',
+          id: 'thinner',
+          items: [
+            'EPOXY Thinner',
+            'PU Thinner',
+            'All-in-One Thinner'
           ]
         }
       ],
@@ -424,24 +435,29 @@ const ProductsCarousel: React.FC = () => {
 
   const getProductId = (productName: string): string => {
     const productMap: Record<string, string> = {
-      'MAPLE INTERIOR': '/products/maple-interior',
-      'MAPLE LUXURY INTERIOR': '/products/maple-luxury-interior',
-      'MAPLE ANTI FUNGAL INTERIOR': '/products/maple-anti-fungal-interior',
-      'ALLURA EXTERIOR': '/products/allura-exterior',
-      'ALLURA LUXURY EXTERIOR': '/products/allura-luxury-exterior',
-      'ALLURA ANTI FUNGAL EXTERIOR': '/products/allura-anti-fungal-exterior',
-      'ENAMELS': '/products/enamels',
+      'EVERLUX INTERIOR': '/products/maple-interior',
+      'EVERLUX LUXURY INTERIOR': '/products/maple-luxury-interior',
+      'EVERLUX ANTI FUNGAL INTERIOR': '/products/maple-anti-fungal-interior',
+      'EVERCOAT EXTERIOR': '/products/allura-exterior',
+      'EVERCOAT LUXURY EXTERIOR': '/products/allura-luxury-exterior',
+      'EVERCOAT ANTI FUNGAL EXTERIOR': '/products/allura-anti-fungal-exterior',
+      'Shynex All-in-One - Matte and Glossy finish': '/products/enamels',
       'WOODVIBE 2K PU Wood Stains - Matte-Glossy': '/products/woodvibe-stains',
       'WOODVIBE 2K PU Clear Coats/Varnishes': '/products/woodvibe-clear-coats',
       'Interior Textured Finishes': '/products/interior-textured-finishes',
       'Exterior Textured Finishes': '/products/exterior-textured-finishes',
       'Stucco Paint': '/products/stucco-paint',
-      'Grippa Interior Primer': '/products/grippa-interior-primer',
-      'Grippa Exterior Primer': '/products/grippa-exterior-primer',
+      'Grippa 2K Wash Primer': '/products/grippa-2k-wash-primer',
+      'Grippa 2K Wood Primer': '/products/grippa-2k-wood-primer',
+      'Grippa Interior / Exterior Wall Primer': '/products/grippa-interior-primer',
+      'Grippa Damp Proof Wall Primer': '/products/grippa-dampproof-primer',
       'Grippa Barrier Coating': '/products/grippa-barrier-coating',
-      'Grippa Dampproof Primer': '/products/grippa-dampproof-primer',
-      'Sliko ACRYLIC INT/EXT PUTTY': '/products/sliko-acrylic-putty',
-      'Sliko CRACKFILL': '/products/sliko-crackfill',
+      'Sliko Interior / Exterior Acrylic Putty': '/products/sliko-acrylic-putty',
+      'Sliko Crack Fill': '/products/sliko-crackfill',
+      'Wood Vibe Wood Putty': '/products/woodvibe-wood-putty',
+      'EPOXY Thinner': '/products/epoxy-thinner',
+      'PU Thinner': '/products/pu-thinner',
+      'All-in-One Thinner': '/products/all-in-one-thinner',
       'ZBOND High Build Epoxy Primer': '/products/zbond-epoxy-primer',
       'ZBOND Epoxy Mastic Coatings': '/products/zbond-epoxy-mastic',
       'BONDX PU Topcoat': '/products/bondx-pu-topcoat',

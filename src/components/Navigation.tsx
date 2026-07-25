@@ -31,24 +31,24 @@ const Navigation: React.FC = () => {
           name: 'Interior',
           id: 'interior',
           items: [
-            { label: 'MAPLE INTERIOR', route: '/products/maple-interior' },
-            { label: 'MAPLE LUXURY INTERIOR', route: '/products/maple-luxury-interior' },
-            { label: 'MAPLE ANTI FUNGAL INTERIOR', route: '/products/maple-anti-fungal-interior' }
+            { label: 'EVERLUX INTERIOR', route: '/products/maple-interior' },
+            { label: 'EVERLUX LUXURY INTERIOR', route: '/products/maple-luxury-interior' },
+            { label: 'EVERLUX ANTI FUNGAL INTERIOR', route: '/products/maple-anti-fungal-interior' }
           ]
         },
         {
           name: 'Exterior',
           id: 'exterior',
           items: [
-            { label: 'ALLURA EXTERIOR', route: '/products/allura-exterior' },
-            { label: 'ALLURA LUXURY EXTERIOR', route: '/products/allura-luxury-exterior' },
-            { label: 'ALLURA ANTI FUNGAL EXTERIOR', route: '/products/allura-anti-fungal-exterior' }
+            { label: 'EVERCOAT EXTERIOR', route: '/products/allura-exterior' },
+            { label: 'EVERCOAT LUXURY EXTERIOR', route: '/products/allura-luxury-exterior' },
+            { label: 'EVERCOAT ANTI FUNGAL EXTERIOR', route: '/products/allura-anti-fungal-exterior' }
           ]
         },
         {
-          name: 'Enamel',
-          id: 'enamel',
-          items: [{ label: 'ENAMELS', route: '/products/enamels' }]
+          name: 'Shynex',
+          id: 'shynex',
+          items: [{ label: 'Shynex All-in-One - Matte and Glossy finish', route: '/products/enamels' }]
         }
       ]
     },
@@ -95,18 +95,29 @@ const Navigation: React.FC = () => {
           name: 'Primers',
           id: 'primers',
           items: [
-            { label: 'Grippa Interior Primer', route: '/products/grippa-interior-primer' },
-            { label: 'Grippa Exterior Primer', route: '/products/grippa-exterior-primer' },
-            { label: 'Grippa Barrier Coating', route: '/products/grippa-barrier-coating' },
-            { label: 'Grippa Dampproof Primer', route: '/products/grippa-dampproof-primer' }
+            { label: 'Grippa 2K Wash Primer', route: '/products/grippa-2k-wash-primer' },
+            { label: 'Grippa 2K Wood Primer', route: '/products/grippa-2k-wood-primer' },
+            { label: 'Grippa Interior / Exterior Wall Primer', route: '/products/grippa-interior-primer' },
+            { label: 'Grippa Damp Proof Wall Primer', route: '/products/grippa-dampproof-primer' },
+            { label: 'Grippa Barrier Coating', route: '/products/grippa-barrier-coating' }
           ]
         },
         {
           name: 'Putty & Fillers',
           id: 'putty-fillers',
           items: [
-            { label: 'Sliko ACRYLIC INT/EXT PUTTY', route: '/products/sliko-acrylic-putty' },
-            { label: 'Sliko CRACKFILL', route: '/products/sliko-crackfill' }
+            { label: 'Sliko Interior / Exterior Acrylic Putty', route: '/products/sliko-acrylic-putty' },
+            { label: 'Sliko Crack Fill', route: '/products/sliko-crackfill' },
+            { label: 'Wood Vibe Wood Putty', route: '/products/woodvibe-wood-putty' }
+          ]
+        },
+        {
+          name: 'Thinner',
+          id: 'thinner',
+          items: [
+            { label: 'EPOXY Thinner', route: '/products/epoxy-thinner' },
+            { label: 'PU Thinner', route: '/products/pu-thinner' },
+            { label: 'All-in-One Thinner', route: '/products/all-in-one-thinner' }
           ]
         }
       ]
@@ -236,12 +247,12 @@ const Navigation: React.FC = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-[100px]">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('home')}>
-            <img src="/logo_final.png" alt="Logo" className="h-20 w-26 object-contain rounded-lg" />
+            <img src="/logo_final.png" alt="Logo" className="h-[86px] w-auto object-contain rounded-lg" />
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-9">
             {navItems.map((item) => (
               <div
                 key={item.name}
@@ -251,10 +262,10 @@ const Navigation: React.FC = () => {
               >
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className="flex items-center space-x-1 text-slate-600 hover:text-blue-600 font-semibold text-"
+                  className="flex items-center space-x-1 text-slate-600 hover:text-blue-600 font-semibold text-base"
                 >
                   <span>{item.name}</span>
-                  {item.name === 'PRODUCTS' && <ChevronDown className="h-4 w-4" />}
+                  {item.name === 'PRODUCTS' && <ChevronDown className="h-5 w-5" />}
                 </button>
 
                 {item.name === 'PRODUCTS' && activeDropdown === 'products' && (
@@ -310,7 +321,7 @@ const Navigation: React.FC = () => {
               rel="noopener noreferrer"
               className="text-green-500 hover:text-green-600"
             >
-              <FaWhatsapp className="h-6 w-6" />
+              <FaWhatsapp className="h-8 w-8" />
             </a>
           </div>
 

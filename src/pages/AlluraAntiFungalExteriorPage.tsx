@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowLeft, CheckCircle, Shield, Droplets, Clock, Thermometer, Eye, Star, Sun, Zap } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const AlluraAntiFungalExteriorPage: React.FC = () => {
+const EvercoatAntiFungalExteriorPage: React.FC = () => {
   const navigate = useNavigate();
 
   const scrollToContact = () => {
@@ -37,11 +37,11 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <Shield className="h-8 w-8 text-green-300" />
-                <h1 className="text-5xl font-bold">ALLURA ANTI FUNGAL EXTERIOR</h1>
+                <h1 className="text-5xl font-bold">EVERCOAT ANTI FUNGAL EXTERIOR</h1>
               </div>
               <p className="text-emerald-200 text-xl mb-6">Advanced Anti-Fungal Exterior Protection</p>
               <p className="text-lg leading-relaxed mb-8">
-                ALLURA ANTI FUNGAL EXTERIOR combines superior weather resistance with advanced anti-fungal protection. 
+                EVERCOAT ANTI FUNGAL EXTERIOR combines superior weather resistance with advanced anti-fungal protection. 
                 Specially formulated for humid climates and coastal environments, it prevents mold, mildew, and algae growth 
                 while providing exceptional exterior protection and color retention.
               </p>
@@ -65,7 +65,7 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
             <div className="relative">
               <img
                 src="/ae1.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                alt="ALLURA ANTI FUNGAL EXTERIOR Application"
+                alt="EVERCOAT ANTI FUNGAL EXTERIOR Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-teal-500 to-green-600 rounded-xl p-4 shadow-xl">
@@ -281,7 +281,7 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
         <div className="bg-white rounded-xl p-8 shadow-lg border border-emerald-200 text-center">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Protect Your Exterior from Fungal Growth</h3>
           <p className="text-slate-700 mb-6 text-lg max-w-2xl mx-auto">
-            Shield your building from mold, mildew, and algae with ALLURA ANTI FUNGAL EXTERIOR. Get expert consultation 
+            Shield your building from mold, mildew, and algae with EVERCOAT ANTI FUNGAL EXTERIOR. Get expert consultation 
             on surface preparation, application techniques, and maintenance for maximum anti-fungal protection.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -300,7 +300,7 @@ const AlluraAntiFungalExteriorPage: React.FC = () => {
           </div>
         {/* Downloadable Data Sheet link */}
 <div className="mt-6">
-{/* Place the PDF file in your public/assets folder at: /public/assets/Allura-AntiFungal-DataSheet.pdf */}
+{/* Place the PDF file in your public/assets folder at: /public/assets/Evercoat-AntiFungal-DataSheet.pdf */}
 <a
 href="/anti_fungal.pdf"
 download="Data Sheet.pdf"
@@ -319,4 +319,4 @@ Download Data Sheet
 };
 
 
-export default AlluraAntiFungalExteriorPage;
+export default EvercoatAntiFungalExteriorPage;
