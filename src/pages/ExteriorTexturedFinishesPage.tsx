@@ -107,8 +107,8 @@ const ExteriorTexturedFinishesPage: React.FC = () => {
               },
               {
                 icon: Eye,
-                title: "Self-Cleaning",
-                description: "Surface technology helps wash away dirt and pollutants naturally."
+                title: "Low Dirt Pick-up",
+                description: "Surface technology resists dirt and pollutant accumulation, keeping the finish cleaner for longer."
               },
               {
                 icon: Clock,

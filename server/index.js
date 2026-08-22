@@ -79,7 +79,7 @@ app.post('/api/contact', async (req, res) => {
       // Email to company
       const companyMailOptions = {
         from: process.env.EMAIL_USER,
-        to: 'sales.cenpro@opromaldives.com', 
+        to: 'parnikabhatia27@gmail.com', 
         subject: `TropiGlow Enquiry from ${name}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

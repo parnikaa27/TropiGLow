@@ -9,13 +9,11 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 // Decorative Paints - Interior
-import MapleInteriorPage from './pages/MapleInteriorPage';
 import MapleLuxuryInteriorPage from './pages/MapleLuxuryInteriorPage';
 import MapleAntiFungalInteriorPage from './pages/MapleAntiFungalInteriorPage';
 
 // Decorative Paints - Exterior
 import AlluraExteriorPage from './pages/AlluraExteriorPage';
-import AlluraLuxuryExteriorPage from './pages/AlluraLuxuryExteriorPage';
 import AlluraAntiFungalExteriorPage from './pages/AlluraAntiFungalExteriorPage';
 
 // Enamels
@@ -100,13 +98,11 @@ function App() {
           <Route path="/" element={<HomePage />} />
 
           {/* Decorative Paints - Interior */}
-          <Route path="/products/maple-interior" element={<MapleInteriorPage />} />
           <Route path="/products/maple-luxury-interior" element={<MapleLuxuryInteriorPage />} />
           <Route path="/products/maple-anti-fungal-interior" element={<MapleAntiFungalInteriorPage />} />
 
           {/* Decorative Paints - Exterior */}
           <Route path="/products/allura-exterior" element={<AlluraExteriorPage />} />
-          <Route path="/products/allura-luxury-exterior" element={<AlluraLuxuryExteriorPage />} />
           <Route path="/products/allura-anti-fungal-exterior" element={<AlluraAntiFungalExteriorPage />} />
 
           {/* Enamels */}

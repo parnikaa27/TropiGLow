@@ -35,7 +35,6 @@ const ProductsCarousel: React.FC = () => {
           name: 'Interior',
           id: 'interior',
           items: [
-            'EVERLUX INTERIOR',
             'EVERLUX LUXURY INTERIOR',
             'EVERLUX ANTI FUNGAL INTERIOR'
           ]
@@ -45,7 +44,6 @@ const ProductsCarousel: React.FC = () => {
           id: 'exterior',
           items: [
             'EVERCOAT EXTERIOR',
-            'EVERCOAT LUXURY EXTERIOR',
             'EVERCOAT ANTI FUNGAL EXTERIOR'
           ]
         },
@@ -448,11 +446,9 @@ const ProductsCarousel: React.FC = () => {
 
   const getProductId = (productName: string): string => {
     const productMap: Record<string, string> = {
-      'EVERLUX INTERIOR': '/products/maple-interior',
       'EVERLUX LUXURY INTERIOR': '/products/maple-luxury-interior',
       'EVERLUX ANTI FUNGAL INTERIOR': '/products/maple-anti-fungal-interior',
       'EVERCOAT EXTERIOR': '/products/allura-exterior',
-      'EVERCOAT LUXURY EXTERIOR': '/products/allura-luxury-exterior',
       'EVERCOAT ANTI FUNGAL EXTERIOR': '/products/allura-anti-fungal-exterior',
       'Shynex All-in-One - Matte and Glossy finish': '/products/enamels',
       'WOODVIBE 2K PU Wood Stains - Matte-Glossy': '/products/woodvibe-stains',
@@ -483,7 +479,7 @@ const ProductsCarousel: React.FC = () => {
       'STEPIN Floor Coating System': '/products/stepin-floor-coating-system'
     };
     
-    return productMap[productName] || '/products/maple-interior';
+    return productMap[productName] || '/products/maple-luxury-interior';
   };
 
   return (

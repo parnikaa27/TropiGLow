@@ -31,7 +31,6 @@ const Navigation: React.FC = () => {
           name: 'Interior',
           id: 'interior',
           items: [
-            { label: 'EVERLUX INTERIOR', route: '/products/maple-interior' },
             { label: 'EVERLUX LUXURY INTERIOR', route: '/products/maple-luxury-interior' },
             { label: 'EVERLUX ANTI FUNGAL INTERIOR', route: '/products/maple-anti-fungal-interior' }
           ]
@@ -41,7 +40,6 @@ const Navigation: React.FC = () => {
           id: 'exterior',
           items: [
             { label: 'EVERCOAT EXTERIOR', route: '/products/allura-exterior' },
-            { label: 'EVERCOAT LUXURY EXTERIOR', route: '/products/allura-luxury-exterior' },
             { label: 'EVERCOAT ANTI FUNGAL EXTERIOR', route: '/products/allura-anti-fungal-exterior' }
           ]
         },
