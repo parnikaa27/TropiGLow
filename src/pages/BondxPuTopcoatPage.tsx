@@ -65,7 +65,7 @@ const BondxPuTopcoatPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-16 space-y-16">
         {/* Features */}
         <section>
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">Features & Benefits</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Features & Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -94,10 +94,12 @@ const BondxPuTopcoatPage: React.FC = () => {
                 desc: 'Gives a flawless, professional appearance to all surfaces.'
               }
             ].map((feature, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-lg border">
-                <feature.icon className="h-6 w-6 text-teal-500 mb-3" />
-                <h3 className="font-semibold text-slate-800 mb-2">{feature.title}</h3>
-                <p className="text-slate-600">{feature.desc}</p>
+              <div key={i} className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
+                <p className="text-slate-700">{feature.desc}</p>
               </div>
             ))}
           </div>

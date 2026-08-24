@@ -258,7 +258,7 @@ const ProductsCarousel: React.FC = () => {
       ],
       description: 'Industrial-grade epoxy and polyurethane systems for maximum protection and durability',
       cardImage: '/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%204.jpg',
-      popupImage: '/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%202.jpg',
+      popupImage: '/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%203.jpg',
       detailedDescription: 'ZBOND and BONDX series offer uncompromising protection for industrial and marine environments. These high-performance coatings provide exceptional corrosion resistance and durability. WBOND HR series is specifically formulated for high-temperature applications.',
       features: [
         'Superior Corrosion Protection',
@@ -306,7 +306,7 @@ const ProductsCarousel: React.FC = () => {
       ],
       description: 'Marine-grade coatings for vessels, offshore structures, and coastal applications',
       cardImage: '/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%201.jpg',
-      popupImage: '/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%203.jpg',
+      popupImage: '/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%202.jpg',
       detailedDescription: 'HAWKY marine coatings provide comprehensive protection against the harsh marine environment. From antifouling to anti-corrosive systems, we ensure your marine assets stay protected.',
       features: [
         'Superior Antifouling Performance',
