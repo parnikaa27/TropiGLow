@@ -64,7 +64,7 @@ const BondxPuTopcoatPage: React.FC = () => {
 
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/MARINE%20&%20PROTECTIVE/MARINE%20&%20PROTECTIVE%203.jpg"
                 alt="BONDX PU Topcoat Application"
                 className="rounded-xl shadow-2xl border-4 border-white border-opacity-20"
               />
