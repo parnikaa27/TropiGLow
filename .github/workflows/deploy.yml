@@ -24,9 +24,15 @@ jobs:
           node-version: 24
       - run: npm ci
       - run: npm run build
-      # GitHub Pages has no server-side routing: serve the app for unknown paths
-      # so opening or refreshing /products/... doesn't show GitHub's 404 page.
-      - run: cp dist/index.html dist/404.html
+      # GitHub Pages has no server-side routing: give each route in App.tsx its own
+      # copy of index.html so product links return 200 (indexable by search engines),
+      # and serve the app for any other path via 404.html.
+      - run: |
+          for route in $(grep -oE 'path="/[^"]+"' src/App.tsx | cut -d'"' -f2); do
+            mkdir -p "dist$(dirname "$route")"
+            cp dist/index.html "dist$route.html"
+          done
+          cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
